@@ -1,32 +1,69 @@
-|  Github Actions | SonarCloud | Hits | License | Service Health | Azure DevOps |
-|  :-------------: | :------: | :------------: | :------: | :-------: | :-------: |
-| [![Java CI with Maven](https://github.com/govindarajanv/java-maven-quickstart-actions/actions/workflows/java-maven-api-master.yml/badge.svg)](https://github.com/govindarajanv/java-maven-quickstart-actions/actions/workflows/java-maven-api-master.yml) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=govindarajanv_java-maven-quickstart-actions&metric=alert_status)](https://sonarcloud.io/dashboard?id=govindarajanv_java-maven-quickstart-actions) | [![HitCount](http://hits.dwyl.com/govindarajanv/java-maven-quickstart-actions.svg)](http://hits.dwyl.com/govindarajanv/java-maven-quickstart-actions) | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) | ![API](https://img.shields.io/website?url=https%3A%2F%2Fjava-maven-quickstart-service.herokuapp.com%2Faddition%2F1%2F2%2F3) | [![Java CI with Maven](https://github.com/govindarajanv/java-maven-quickstart-actions/actions/workflows/java-maven-api-master.yml/badge.svg)](https://github.com/govindarajanv/java-maven-quickstart-actions/actions/workflows/java-maven-api-master.yml) |
+# Novels Summary Archive
 
+[![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/govindarajanv/novels)
+[![Pages](https://img.shields.io/badge/GitHub%20Pages-live-success.svg)](https://govindarajanv.github.io/novels/)
+[![Status](https://img.shields.io/badge/summaries-100--line%20verified-brightgreen.svg)](the-murder-artist.md)
 
-# Java Maven Quickstart Boiler Plate Repository
+**Current Version:** `v1.0.0`  
+**Live Site:** [https://govindarajanv.github.io/novels/](https://govindarajanv.github.io/novels/)
 
-This quickstart boilerplate repository has a simple calculator web service implemented that caches the results of its computations, with endpoints in a format similar to the following:
+---
 
-- /addition/{a}/{b}/{c}
-- /subtraction/{a}/{b}/{c}
-- /multiplication/{a}/{b}/{c}
-- /division/{a}/{b}
+## Overview
 
-For the operations of addition, subtraction, and multiplication, the calculator endpoints should support an input of up to three numbers in the same call.
+The **Novels Summary Archive** is a curated digital library of comprehensive, rigorously researched literary syntheses. Designed for avid readers, literary analysts, and book lovers, each novel is distilled into **exactly 100 lines** of high-density markdown capturing:
 
-Each endpoint should support the GET method, and it should return the result in JSON format. If there is more than one call for the same operation on the same numbers, then the result should be returned from the cache rather than being recomputed.
+1. **Bibliographic Metadata & Overview** (authorship, publication details, central conflicts, core settings)
+2. **Dramatis Personae** (detailed character breakdowns, motives, and roles)
+3. **Chronological Plot Narrative** (inciting incident, rising tension, clues, twists, climax, and resolution)
+4. **Thematic Depth & Critical Reception** (motifs, psychological analysis, social commentary, and literary craft)
 
-## Links
+---
 
-- [Static Site for Documentation](https://govindarajanv.github.io/java-maven-quickstart-actions/)
-- [SonarCloud Dashboard](https://sonarcloud.io/dashboard?id=govindarajanv_java-maven-quickstart-actions)
-- [DockerHub](https://hub.docker.com/repository/docker/govindarajanv/java-maven-quickstart-service/tags?page=1&ordering=last_updated)
-- [Heroku Dashboard](https://dashboard.heroku.com/apps/java-maven-quickstart-service/activity)
-- [API](https://java-maven-quickstart-service.herokuapp.com/addition/1/2/3)
-- [CodeCov](https://app.codecov.io/gh/govindarajanv/java-maven-quickstart-actions/commits?page=1)
-- [Marketplace](https://github.com/marketplace/actions/govind-secret-finder)
-- [Pagerduty](https://govindarajanv.pagerduty.com/incidents)
-- [Grafana](https://govindarajanv.grafana.net/dashboard/)
+## 📚 Current Catalog
 
-## References
-- ltenconi/calculator-api
+| Novel Title | Author | Genre | Language | Summary (Pages) | Summary (Markdown) | Verification |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **The Murder Artist** | John Case | Crime / Thriller | English | [Read Summary](https://govindarajanv.github.io/novels/the-murder-artist.html) | [the-murder-artist.md](the-murder-artist.md) | `✓ 100 Lines` |
+
+---
+
+## 🚀 How to Add a New Novel
+
+1. **Update `novels.yaml`**: Add the new novel metadata to `novels.yaml`:
+   ```yaml
+   novels:
+     - name: 'The Murder Artist'
+       author: 'John Case'
+       genre: 'Crime'
+       language: 'English'
+     - name: 'New Novel Title'
+       author: 'Author Name'
+       genre: 'Genre'
+       language: 'Language'
+   ```
+
+2. **Generate the 100-Line Summary**:
+   Create `<novel-slug>.md` with **exactly 100 lines** summarizing the novel across narrative arcs, character dossiers, twists, and themes.
+
+3. **Validate & Build**:
+   ```bash
+   python3 scripts/build_site.py
+   ```
+   This will verify that all summaries have exactly 100 lines and regenerate `index.md`.
+
+4. **Commit & Push**:
+   ```bash
+   git add novels.yaml index.md <novel-slug>.md
+   git commit -m "Add 100-line summary for <novel-name>"
+   git push origin master
+   ```
+
+---
+
+## 🛠️ Technology Stack
+
+- **Static Site Engine**: Jekyll (GitHub Pages)
+- **Validation & Compilation**: Python 3 (`scripts/build_site.py`)
+- **Deployment**: GitHub Actions (`.github/workflows/pages.yml`)
+- **Typography & Theme**: Responsive layout with automatic dark/light theme support
