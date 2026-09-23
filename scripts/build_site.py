@@ -8,7 +8,7 @@ import sys
 import re
 import yaml
 
-VERSION = "v1.0.0"
+VERSION = "v1.1.0"
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NOVELS_YAML_PATH = os.path.join(REPO_ROOT, "novels.yaml")
 INDEX_MD_PATH = os.path.join(REPO_ROOT, "index.md")

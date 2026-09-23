@@ -2,7 +2,7 @@ title: "Novels Summary Archive"
 description: "Curated collection of comprehensive 100-line novel summaries, critical character studies, and thematic breakdowns."
 url: "https://govindarajanv.github.io"
 baseurl: "/novels"
-version: "v1.0.0"
+version: "v1.1.0"
 markdown: kramdown
 kramdown:
   input: GFM

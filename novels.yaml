@@ -1,5 +1,13 @@
 novels:
-  name: 'The Murder Artist'
-  author: John Case
-  language: English
-  genre: Crime
+  - name: 'The Murder Artist'
+    author: John Case
+    language: English
+    genre: Crime
+  - name: 'The Adventures of Tom Sawyer'
+    author: Mark Twain
+    language: English
+    genre: bildungsroman
+  - name: 'Adventures of Huckleberry Finn'
+    author: Mark Twain
+    language: English
+    genre: bildungsroman
