@@ -1,10 +1,10 @@
 # Novels Summary Archive
 
-[![Version](https://img.shields.io/badge/version-v1.1.0-blue.svg)](https://github.com/govindarajanv/novels)
+[![Version](https://img.shields.io/badge/version-v1.2.0-blue.svg)](https://github.com/govindarajanv/novels)
 [![Pages](https://img.shields.io/badge/GitHub%20Pages-live-success.svg)](https://govindarajanv.github.io/novels/)
-[![Status](https://img.shields.io/badge/summaries-100--line%20verified-brightgreen.svg)](index.md)
+[![Status](https://img.shields.io/badge/summaries-100--line%20verified-brightgreen.svg)](index.html)
 
-**Current Version:** `v1.1.0`  
+**Current Version:** `v1.2.0`  
 **Live Site:** [https://govindarajanv.github.io/novels/](https://govindarajanv.github.io/novels/)
 
 ---

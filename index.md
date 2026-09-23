@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Novels Summary Archive
-version: v1.1.0
+version: v1.2.0
 ---
 
 <div class="site-hero">
   <h1 class="site-title">Novels Summary Archive</h1>
   <div class="site-version-row">
-    <span class="version-pill">v1.1.0</span>
+    <span class="version-pill">v1.2.0</span>
     <span style="color: var(--text-muted); font-size: 0.85rem;">Comprehensive 100-Line Literary Analyses</span>
   </div>
   <p class="site-tagline">
@@ -83,5 +83,5 @@ version: v1.1.0
 ### ⚙️ How It Works
 1. **Catalog Definition (`novels.yaml`)**: Add novels with their title, author, genre, and language.
 2. **100-Line Synthesis**: A comprehensive, rigorously researched markdown summary is authored with exactly 100 lines.
-3. **Static Generation**: `scripts/build_site.py` validates line counts and compiles `index.md`.
+3. **Static Generation**: `scripts/build_site.py` validates line counts and compiles `index.md`, `index.html`, and `<novel-slug>.html`.
 4. **GitHub Pages Deployment**: Automations build and deploy the archive to GitHub Pages.

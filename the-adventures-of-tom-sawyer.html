@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Adventures of Tom Sawyer — 100-Line Summary & Analysis</title>
+  <meta name="description" content="Comprehensive 100-line summary, character dossier, and critical analysis of The Adventures of Tom Sawyer by Mark Twain.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --bg: #0b1120;
+      --surface: #1e293b;
+      --surface-hover: #334155;
+      --surface-card: #141f32;
+      --border: #334155;
+      --border-subtle: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.15);
+      --accent: #818cf8;
+      --accent-glow: rgba(129, 140, 248, 0.15);
+      --success: #34d399;
+      --success-glow: rgba(52, 211, 153, 0.15);
+      --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+      --card-hover-shadow: 0 14px 34px -4px rgba(56, 189, 248, 0.2);
+      --radius: 12px;
+      --radius-sm: 6px;
+      --article-font-size: 1.02rem;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-hover: #f1f5f9;
+      --surface-card: #ffffff;
+      --border: #cbd5e1;
+      --border-subtle: #f1f5f9;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-faint: #94a3b8;
+      --primary: #0284c7;
+      --primary-glow: rgba(2, 132, 199, 0.12);
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.12);
+      --success: #059669;
+      --success-glow: rgba(5, 150, 105, 0.12);
+      --card-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.08);
+      --card-hover-shadow: 0 12px 28px -4px rgba(2, 132, 199, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: var(--primary-glow);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      font-size: 1.15rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+
+    .nav-link:hover { color: var(--primary); }
+
+    .theme-toggle-btn {
+      background: var(--surface-hover);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      padding: 0.4rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .version-pill {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--primary-glow);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      letter-spacing: 0.03em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1080px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      flex: 1;
+    }
+
+    /* Hero Section */
+    .site-hero {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-title {
+      font-size: 2.35rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.4rem;
+      background: linear-gradient(135deg, var(--text) 45%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .site-version-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .site-tagline {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 780px;
+      line-height: 1.6;
+    }
+
+    /* Stats Banner */
+    .stats-banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin: 1.75rem 0 2.25rem;
+      padding: 1.1rem 1.4rem;
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .stat-number {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text);
+      font-family: var(--font-mono);
+    }
+
+    /* Novels Grid */
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin: 2rem 0 1.25rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .novels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .novel-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative;
+    }
+
+    .novel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: var(--primary);
+    }
+
+    .novel-card.active-card {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px var(--primary-glow);
+    }
+
+    .novel-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--surface-hover);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .badge-primary {
+      background: var(--primary-glow);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .badge-success {
+      background: var(--success-glow);
+      color: var(--success);
+      border-color: var(--success);
+    }
+
+    .novel-card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.015em;
+    }
+
+    .novel-card-author {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .novel-card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.4rem;
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .novel-card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-read-in-page {
+      background: var(--primary);
+      color: #0b1120;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-read-in-page:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .card-secondary-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+    }
+
+    .card-secondary-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .card-secondary-links a:hover { color: var(--primary); }
+
+    /* Interactive In-Page Reader */
+    .reader-section {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 3rem;
+      scroll-margin-top: 5rem;
+    }
+
+    .reader-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .reader-title-area {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .reader-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+    }
+
+    .reader-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      padding: 0.35rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      text-decoration: none;
+    }
+
+    .ctrl-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .novel-tabs-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+      background: var(--surface);
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+
+    .novel-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .novel-tab-btn:hover {
+      color: var(--text);
+      background: var(--surface-hover);
+    }
+
+    .novel-tab-btn.active-tab {
+      background: var(--primary-glow);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    /* Article Content Typography */
+    .content-article {
+      font-size: var(--article-font-size);
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .novel-title-main {
+      font-size: 1.95rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .novel-section-heading {
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.85rem 0 0.85rem;
+      letter-spacing: -0.01em;
+      border-left: 3px solid var(--primary);
+      padding-left: 0.75rem;
+    }
+
+    .content-article h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+
+    .content-article p {
+      margin-bottom: 1.15rem;
+      color: var(--text);
+    }
+
+    .summary-list {
+      list-style-type: disc;
+      margin: 0.75rem 0 1.25rem 1.6rem;
+    }
+
+    .summary-item {
+      margin-bottom: 0.55rem;
+      padding-left: 0.2rem;
+    }
+
+    .summary-item strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .divider {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 2.2rem 0;
+    }
+
+    .content-article a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    .content-article a:hover { border-bottom-color: var(--primary); }
+
+    .content-article code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: var(--surface);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* Table */
+    .table-responsive {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.8rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--surface);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    /* Standalone Novel Page Bar */
+    .back-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 0.45rem 0.9rem;
+      background: var(--primary-glow);
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-sm);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--surface-hover);
+      transform: translateX(-2px);
+    }
+
+    .pagination-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 2.25rem 1.5rem;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover { color: var(--primary); }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--surface);
+      border: 1px solid var(--primary);
+      color: var(--text);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">📖</span>
+        <span>Novels Summary Archive</span>
+      </a>
+      <div class="nav-links">
+        <span class="version-pill">v1.2.0</span>
+        <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle theme">☀️ Light</button>
+        <a href="https://github.com/govindarajanv/novels" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="back-bar">
+      <a href="index.html" class="back-btn">← Back to Novels Index</a>
+      <div class="reader-controls">
+        <span class="badge badge-primary">bildungsroman</span>
+        <span class="badge">English</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
+        <button class="ctrl-btn" onclick="changeFontSize(-0.05)" title="Decrease font size">A-</button>
+        <button class="ctrl-btn" onclick="changeFontSize(0.05)" title="Increase font size">A+</button>
+        <button class="ctrl-btn" onclick="copySummaryText()" title="Copy entire text">📋 Copy</button>
+        <a href="the-adventures-of-tom-sawyer.md" class="ctrl-btn" target="_blank" title="View raw markdown">📝 Raw .md</a>
+      </div>
+    </div>
+
+    <article class="content-article" style="background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; box-shadow: var(--card-shadow);">
+<h1 class="novel-title-main">The Adventures of Tom Sawyer — Comprehensive Novel Summary & Critical Analysis</h1>
+<p><strong>Author:</strong> Mark Twain (Samuel Langhorne Clemens) | <strong>Genre:</strong> Bildungsroman / Adventure | <strong>Language:</strong> English (Published: 1876)</p>
+<hr class="divider">
+<h3 class="novel-section-heading">1. Bibliographic Metadata & Overview</h3>
+<ul class="summary-list">
+  <li class="summary-item"><strong>Title:</strong> The Adventures of Tom Sawyer</li>
+  <li class="summary-item"><strong>Author:</strong> Mark Twain (pseudonym of Samuel Langhorne Clemens, 1835–1910)</li>
+  <li class="summary-item"><strong>Publication Date:</strong> 1876 (American Publishing Company, Hartford, Connecticut)</li>
+  <li class="summary-item"><strong>Protagonist:</strong> Thomas "Tom" Sawyer — An imaginative, mischievous, and good-hearted Missouri youth</li>
+  <li class="summary-item"><strong>Setting & Epoch:</strong> St. Petersburg (modeled on Hannibal, Missouri) along the Mississippi River during the 1840s</li>
+  <li class="summary-item"><strong>Literary Mode:</strong> Picaresque adventure, coming-of-age Bildungsroman, and satirical pastoral comedy</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">2. Dramatis Personae</h3>
+<ul class="summary-list">
+  <li class="summary-item"><strong>Tom Sawyer:</strong> The clever orphan hero whose vivid romantic imagination repeatedly clashes with adult authority.</li>
+  <li class="summary-item"><strong>Huckleberry Finn:</strong> The outcast son of the town drunkard, admired by schoolboys for his radical freedom.</li>
+  <li class="summary-item"><strong>Aunt Polly:</strong> Tom’s loving, devout maternal aunt who struggles constantly between stern discipline and tender affection.</li>
+  <li class="summary-item"><strong>Becky Thatcher:</strong> The judge's lovely daughter whose courtship with Tom alternates between juvenile jealousy and devoted romance.</li>
+  <li class="summary-item"><strong>Injun Joe:</strong> A vengeful, ruthless half-Native American outcast who commits murder and terrorizes the community.</li>
+  <li class="summary-item"><strong>Muff Potter:</strong> A kindly, naive, alcoholic fisherman falsely framed by Injun Joe for Dr. Robinson's murder.</li>
+  <li class="summary-item"><strong>Dr. Robinson:</strong> A young physician murdered while hiring grave robbers for anatomical study specimens.</li>
+  <li class="summary-item"><strong>Joe Harper & Sid Sawyer:</strong> Joe is Tom’s best friend and pirate comrade; Sid is Tom’s spiteful, well-behaved half-brother.</li>
+  <li class="summary-item"><strong>Widow Douglas & Judge Thatcher:</strong> Pillar community elders who represent Christian charity and civic law respectively.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">3. Boyhood in St. Petersburg & The Whitewashed Fence</h3>
+<ul class="summary-list">
+  <li class="summary-item">Tom skips Friday school to go swimming, leading Aunt Polly to sentence him to whitewash thirty yards of board fence on Saturday.</li>
+  <li class="summary-item">Despairing at losing his holiday, Tom brilliantly feigns that painting the fence is an exclusive, delightful privilege.</li>
+  <li class="summary-item">Passing village boys beg for a turn, bribing Tom with an apple, a kite, marbles, and a dead rat with a string.</li>
+  <li class="summary-item">By afternoon, the fence has three coats of whitewash, and Tom is enriched with boyhood trinkets while resting in the shade.</li>
+  <li class="summary-item">At Sunday school, Tom trades his acquired booty for colored tickets, fraudulently claiming a prized Doré Bible before the congregation.</li>
+  <li class="summary-item">Tom falls head-over-heels in love with newcomer Becky Thatcher, winning her heart with a brass doorknob until an ex-flame is revealed.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">4. The Midnight Graveyard Murder & The Blood Oath</h3>
+<ul class="summary-list">
+  <li class="summary-item">Tom joins Huck Finn at midnight in the town cemetery to test a superstitious ritual curing warts with a dead cat.</li>
+  <li class="summary-item">Hiding behind headstones, the terrified boys witness Dr. Robinson arrive with Injun Joe and Muff Potter to rob a fresh grave.</li>
+  <li class="summary-item">A violent dispute over extortionate payment erupts; Potter is knocked unconscious in the ensuing drunken melee.</li>
+  <li class="summary-item">Injun Joe stabs Dr. Robinson to death using Potter's dropped clasp-knife, calmly planting the bloody weapon in Muff’s limp hand.</li>
+  <li class="summary-item">When Potter regains consciousness, Injun Joe deceitfully convinces the drunken man that he butchered the doctor in a stupor.</li>
+  <li class="summary-item">Horrified, Tom and Huck flee to a deserted tannery and swear a solemn blood oath on a pine shingle never to reveal what they saw.</li>
+  <li class="summary-item">Muff Potter is arrested and jailed; Tom is wracked by terrible nightmares and moral guilt, bringing comforts to Muff's cell window.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">5. Jackson's Island Pirates & The Triumphant Funeral</h3>
+<ul class="summary-list">
+  <li class="summary-item">Feeling unappreciated and rejected by Becky, Tom recruits Joe Harper and Huck Finn to escape society and become pirates.</li>
+  <li class="summary-item">The trio steals a raft and paddles down the Mississippi to Jackson’s Island, setting up camp around an open campfire.</li>
+  <li class="summary-item">They spend joyous days swimming, fishing, and smoking tobacco leaves until homesickness and a severe thunderstorm strike.</li>
+  <li class="summary-item">Tom sneaks back to town by night, hiding under Aunt Polly’s bed to overhear family members weeping and preparing their funeral sermon.</li>
+  <li class="summary-item">On Sunday morning, while the St. Petersburg congregation sings elegies for the lost youths, the three boys march down the church aisle.</li>
+  <li class="summary-item">The assembly breaks into euphoric tears and joyful hymns, welcoming the resurrected runaways in a moment of communal celebration.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">6. Gallantry at School & The Trial of Muff Potter</h3>
+<ul class="summary-list">
+  <li class="summary-item">Back at school, Tom catches Becky accidentally tearing a page from the schoolmaster’s private medical anatomy book.</li>
+  <li class="summary-item">When Master Dobbins demands to know the culprit, Tom gallantly shouts that he did it, enduring a savage thrashing to shield Becky.</li>
+  <li class="summary-item">Muff Potter’s murder trial commences; the doomed defendant offers no defense as town prejudice and circumstantial evidence mount.</li>
+  <li class="summary-item">Unable to stomach an innocent man hanging for Injun Joe's crime, Tom breaks his blood oath and takes the witness stand.</li>
+  <li class="summary-item">Tom narrates the terrifying graveyard confrontation; hearing his guilt exposed, Injun Joe leaps through a window and vanishes.</li>
+  <li class="summary-item">Tom is lionized as a brave town hero by day, but endures sleepless nights terrified that the fugitive Joe will return for vengeance.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">7. The Haunted House, Injun Joe's Gold & McDougal's Cave</h3>
+<ul class="summary-list">
+  <li class="summary-item">Tom and Huck hunt for buried treasure in a decaying haunted house, exploring upstairs when two scoundrels unexpectedly enter below.</li>
+  <li class="summary-item">Peering through floorboards, they discover one man is Injun Joe in disguise, plotting revenge and unearthing thousands in stolen gold.</li>
+  <li class="summary-item">The boys track the villains; Huck tails Joe to Widow Douglas’s estate, alerting the Welshman and foiling a mutilation attack.</li>
+  <li class="summary-item">Concurrently, Tom, Becky, and classmates embark on a picnic exploring the boundless limestone corridors of McDougal’s Cave.</li>
+  <li class="summary-item">Tom and Becky wander deep into uncharted passages chasing bats, losing their way completely as their candle wax runs out.</li>
+  <li class="summary-item">The town realizes the children are missing; organized search parties comb the dark subterranean chambers for three desperate days.</li>
+  <li class="summary-item">While probing an abyss with a kite string, Tom encounters Injun Joe crouching in the shadows, but the villain retreats in darkness.</li>
+  <li class="summary-item">Guided by Tom’s tenacity and a faint speck of daylight, Tom finds a hidden egress five miles downriver, rescuing himself and Becky.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">8. The Sealed Gate, Injun Joe's Fate & Reclaimed Wealth</h3>
+<ul class="summary-list">
+  <li class="summary-item">Judge Thatcher orders McDougal's cave mouth securely padlocked with triple iron doors to prevent future accidents.</li>
+  <li class="summary-item">When Tom hears of the closure two weeks later, he turns pale and informs the town that Injun Joe is trapped inside.</li>
+  <li class="summary-item">Citizens unlock the gate and find Injun Joe dead on the threshold, having fruitlessly tried to hack through rock with his broken bowie knife.</li>
+  <li class="summary-item">Tom and Huck re-enter the cave through the secret riverside fissure, locating Injun Joe’s stash box marked by a black cross.</li>
+  <li class="summary-item">They haul out over twelve thousand dollars in gold coin, which Judge Thatcher and the community invest for their lifelong futures.</li>
+  <li class="summary-item">Widow Douglas formally adopts Huck, attempting to civilize him with clean garments, bedsheets, schoolbooks, and church attendance.</li>
+  <li class="summary-item">Smothered by respectability, Huck flees back to an empty hogshead barrel until Tom promises him a place in his new robber gang.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">9. Thematic Analysis & Critical Legacy</h3>
+<ul class="summary-list">
+  <li class="summary-item"><strong>The Dual Nature of Boyhood:</strong> Balances idyllic, nostalgic romanticism with the chilling darkness of murder, vengeance, and terror.</li>
+  <li class="summary-item"><strong>Conscience vs. Social Conformity:</strong> Tom’s decision to testify highlights genuine ethical integrity over cowardly institutional silence.</li>
+  <li class="summary-item"><strong>Satire of Frontier Institutions:</strong> Twain mercilessly parodies Sunday school dogma, rigid education, and bourgeois respectability.</li>
+  <li class="summary-item"><strong>The Architecture of Imagination:</strong> Tom transforms mundane reality into theater through make-believe, pirate lore, and superstition.</li>
+  <li class="summary-item"><strong>Pivotal American Masterwork:</strong> Established Samuel Clemens as the preeminent voice of American vernacular and Mississippi lore.</li>
+  <li class="summary-item"><em>The Adventures of Tom Sawyer</em> remains an immortal portrait of youth, moral courage, and nineteenth-century frontier life.</li>
+</ul>
+    </article>
+
+    <div class="pagination-bar">
+      <a href="the-murder-artist.html" class="ctrl-btn">← The Murder Artist</a>
+      <a href="index.html" class="ctrl-btn">📚 All Novels</a>
+      <a href="adventures-of-huckleberry-finn.html" class="ctrl-btn">Adventures of Huckleberry Finn →</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Novels Summary Archive</strong> &bull; Version <span class="version-pill" style="font-size: 0.7rem; padding: 0.1rem 0.45rem;">v1.2.0</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Index</a> &bull;
+        <a href="the-adventures-of-tom-sawyer.md">Markdown Source</a> &bull;
+        <a href="https://github.com/govindarajanv/novels" target="_blank" rel="noopener noreferrer">Source Code</a>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+  function initTheme() {
+    const saved = localStorage.getItem('novel_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeBtn(saved);
+  }
+
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('novel_theme', next);
+    updateThemeBtn(next);
+  }
+
+  function updateThemeBtn(theme) {
+    const btns = document.querySelectorAll('.theme-toggle-btn');
+    btns.forEach(btn => {
+      btn.innerHTML = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    });
+  }
+
+  let currentFontSize = 1.02;
+  function changeFontSize(delta) {
+    currentFontSize = Math.max(0.85, Math.min(1.4, currentFontSize + delta));
+    document.documentElement.style.setProperty('--article-font-size', currentFontSize + 'rem');
+  }
+
+  function copySummaryText() {
+    const article = document.querySelector('.content-article');
+    if (!article) return;
+    navigator.clipboard.writeText(article.innerText).then(() => {
+      showToast('Summary copied to clipboard!');
+    });
+  }
+
+  function showToast(msg) {
+    let toast = document.getElementById('app-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'app-toast';
+      toast.className = 'toast';
+      document.body.appendChild(toast);
+    }
+    toast.innerText = msg;
+    toast.style.display = 'block';
+    setTimeout(() => { toast.style.display = 'none'; }, 2400);
+  }
+
+  document.addEventListener('DOMContentLoaded', initTheme);
+</script>
+
+</body>
+</html>

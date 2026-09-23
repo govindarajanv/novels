@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novels Summary Archive — Comprehensive 100-Line Analyses</title>
+  <meta name="description" content="Curated repository of high-yield, structured 100-line novel summaries. Every entry encompasses complete narrative arcs, character dossiers, cryptic motifs, and critical thematic evaluations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --bg: #0b1120;
+      --surface: #1e293b;
+      --surface-hover: #334155;
+      --surface-card: #141f32;
+      --border: #334155;
+      --border-subtle: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.15);
+      --accent: #818cf8;
+      --accent-glow: rgba(129, 140, 248, 0.15);
+      --success: #34d399;
+      --success-glow: rgba(52, 211, 153, 0.15);
+      --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+      --card-hover-shadow: 0 14px 34px -4px rgba(56, 189, 248, 0.2);
+      --radius: 12px;
+      --radius-sm: 6px;
+      --article-font-size: 1.02rem;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-hover: #f1f5f9;
+      --surface-card: #ffffff;
+      --border: #cbd5e1;
+      --border-subtle: #f1f5f9;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-faint: #94a3b8;
+      --primary: #0284c7;
+      --primary-glow: rgba(2, 132, 199, 0.12);
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.12);
+      --success: #059669;
+      --success-glow: rgba(5, 150, 105, 0.12);
+      --card-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.08);
+      --card-hover-shadow: 0 12px 28px -4px rgba(2, 132, 199, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: var(--primary-glow);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      font-size: 1.15rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+
+    .nav-link:hover { color: var(--primary); }
+
+    .theme-toggle-btn {
+      background: var(--surface-hover);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      padding: 0.4rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .version-pill {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--primary-glow);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      letter-spacing: 0.03em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1080px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      flex: 1;
+    }
+
+    /* Hero Section */
+    .site-hero {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-title {
+      font-size: 2.35rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.4rem;
+      background: linear-gradient(135deg, var(--text) 45%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .site-version-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .site-tagline {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 780px;
+      line-height: 1.6;
+    }
+
+    /* Stats Banner */
+    .stats-banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin: 1.75rem 0 2.25rem;
+      padding: 1.1rem 1.4rem;
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .stat-number {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text);
+      font-family: var(--font-mono);
+    }
+
+    /* Novels Grid */
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin: 2rem 0 1.25rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .novels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .novel-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative;
+    }
+
+    .novel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: var(--primary);
+    }
+
+    .novel-card.active-card {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px var(--primary-glow);
+    }
+
+    .novel-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--surface-hover);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .badge-primary {
+      background: var(--primary-glow);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .badge-success {
+      background: var(--success-glow);
+      color: var(--success);
+      border-color: var(--success);
+    }
+
+    .novel-card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.015em;
+    }
+
+    .novel-card-author {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .novel-card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.4rem;
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .novel-card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-read-in-page {
+      background: var(--primary);
+      color: #0b1120;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-read-in-page:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .card-secondary-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+    }
+
+    .card-secondary-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .card-secondary-links a:hover { color: var(--primary); }
+
+    /* Interactive In-Page Reader */
+    .reader-section {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 3rem;
+      scroll-margin-top: 5rem;
+    }
+
+    .reader-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .reader-title-area {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .reader-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+    }
+
+    .reader-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      padding: 0.35rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      text-decoration: none;
+    }
+
+    .ctrl-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .novel-tabs-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+      background: var(--surface);
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+
+    .novel-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .novel-tab-btn:hover {
+      color: var(--text);
+      background: var(--surface-hover);
+    }
+
+    .novel-tab-btn.active-tab {
+      background: var(--primary-glow);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    /* Article Content Typography */
+    .content-article {
+      font-size: var(--article-font-size);
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .novel-title-main {
+      font-size: 1.95rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .novel-section-heading {
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.85rem 0 0.85rem;
+      letter-spacing: -0.01em;
+      border-left: 3px solid var(--primary);
+      padding-left: 0.75rem;
+    }
+
+    .content-article h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+
+    .content-article p {
+      margin-bottom: 1.15rem;
+      color: var(--text);
+    }
+
+    .summary-list {
+      list-style-type: disc;
+      margin: 0.75rem 0 1.25rem 1.6rem;
+    }
+
+    .summary-item {
+      margin-bottom: 0.55rem;
+      padding-left: 0.2rem;
+    }
+
+    .summary-item strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .divider {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 2.2rem 0;
+    }
+
+    .content-article a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    .content-article a:hover { border-bottom-color: var(--primary); }
+
+    .content-article code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: var(--surface);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* Table */
+    .table-responsive {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.8rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--surface);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    /* Standalone Novel Page Bar */
+    .back-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 0.45rem 0.9rem;
+      background: var(--primary-glow);
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-sm);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--surface-hover);
+      transform: translateX(-2px);
+    }
+
+    .pagination-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 2.25rem 1.5rem;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover { color: var(--primary); }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--surface);
+      border: 1px solid var(--primary);
+      color: var(--text);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">📖</span>
+        <span>Novels Summary Archive</span>
+      </a>
+      <div class="nav-links">
+        <span class="version-pill">v1.2.0</span>
+        <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle theme">☀️ Light</button>
+        <a href="#reader" class="nav-link">Reader</a>
+        <a href="#catalog-table" class="nav-link">Catalog</a>
+        <a href="https://github.com/govindarajanv/novels" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Hero Section -->
+    <header class="site-hero">
+      <h1 class="site-title">Novels Summary Archive</h1>
+      <div class="site-version-row">
+        <span class="version-pill">v1.2.0</span>
+        <span style="color: var(--text-muted); font-size: 0.9rem;">Comprehensive 100-Line Literary Analyses</span>
+      </div>
+      <p class="site-tagline">
+        Curated repository of high-yield, structured 100-line novel summaries. Every entry encompasses complete narrative arcs, character dossiers, cryptic motifs, and critical thematic evaluations.
+      </p>
+
+      <div class="stats-banner">
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span>Cataloged Novels</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">300</span>
+          <span>Verified Lines</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span>Line-Count Accuracy</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Catalog of Summaries Cards Grid -->
+    <section>
+      <h2 class="section-title">📚 Catalog of Novels</h2>
+      <div class="novels-grid">
+  <div class="novel-card active-card" id="card-the-murder-artist">
+    <div>
+      <div class="novel-card-meta">
+        <span class="badge badge-primary">Crime</span>
+        <span class="badge">English</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
+      </div>
+      <h2 class="novel-card-title">The Murder Artist</h2>
+      <p class="novel-card-author"><strong>By:</strong> John Case</p>
+      <p class="novel-card-desc">Complete 100-line analytical synthesis covering major dramatic events, character dossiers, hidden symbols, and thematic deconstruction.</p>
+    </div>
+    <div class="novel-card-actions">
+      <button class="btn-read-in-page" onclick="selectNovel('the-murder-artist', true)">
+        📖 Read In-Page &darr;
+      </button>
+      <div class="card-secondary-links">
+        <a href="the-murder-artist.html"><strong>Dedicated Page &rarr;</strong></a>
+        <a href="the-murder-artist.md" target="_blank">View Markdown</a>
+      </div>
+    </div>
+  </div>
+  <div class="novel-card " id="card-the-adventures-of-tom-sawyer">
+    <div>
+      <div class="novel-card-meta">
+        <span class="badge badge-primary">bildungsroman</span>
+        <span class="badge">English</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
+      </div>
+      <h2 class="novel-card-title">The Adventures of Tom Sawyer</h2>
+      <p class="novel-card-author"><strong>By:</strong> Mark Twain</p>
+      <p class="novel-card-desc">Complete 100-line analytical synthesis covering major dramatic events, character dossiers, hidden symbols, and thematic deconstruction.</p>
+    </div>
+    <div class="novel-card-actions">
+      <button class="btn-read-in-page" onclick="selectNovel('the-adventures-of-tom-sawyer', true)">
+        📖 Read In-Page &darr;
+      </button>
+      <div class="card-secondary-links">
+        <a href="the-adventures-of-tom-sawyer.html"><strong>Dedicated Page &rarr;</strong></a>
+        <a href="the-adventures-of-tom-sawyer.md" target="_blank">View Markdown</a>
+      </div>
+    </div>
+  </div>
+  <div class="novel-card " id="card-adventures-of-huckleberry-finn">
+    <div>
+      <div class="novel-card-meta">
+        <span class="badge badge-primary">bildungsroman</span>
+        <span class="badge">English</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
+      </div>
+      <h2 class="novel-card-title">Adventures of Huckleberry Finn</h2>
+      <p class="novel-card-author"><strong>By:</strong> Mark Twain</p>
+      <p class="novel-card-desc">Complete 100-line analytical synthesis covering major dramatic events, character dossiers, hidden symbols, and thematic deconstruction.</p>
+    </div>
+    <div class="novel-card-actions">
+      <button class="btn-read-in-page" onclick="selectNovel('adventures-of-huckleberry-finn', true)">
+        📖 Read In-Page &darr;
+      </button>
+      <div class="card-secondary-links">
+        <a href="adventures-of-huckleberry-finn.html"><strong>Dedicated Page &rarr;</strong></a>
+        <a href="adventures-of-huckleberry-finn.md" target="_blank">View Markdown</a>
+      </div>
+    </div>
+  </div>
+      </div>
+    </section>
+
+    <!-- Interactive In-Page Reader -->
+    <section id="reader" class="reader-section">
+      <div class="reader-header">
+        <div class="reader-title-area">
+          <span style="font-size: 1.5rem;">📖</span>
+          <div>
+            <h2 class="reader-title" id="current-novel-heading">The Murder Artist</h2>
+            <div id="reader-meta-badges" style="display: flex; gap: 0.4rem; margin-top: 0.25rem;">
+              <span class="badge badge-primary" id="reader-genre">Crime</span>
+              <span class="badge" id="reader-language">English</span>
+              <span class="badge badge-success">✓ 100 Lines Verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="reader-controls">
+          <button class="ctrl-btn" onclick="changeFontSize(-0.05)" title="Decrease font size">A-</button>
+          <button class="ctrl-btn" onclick="changeFontSize(0.05)" title="Increase font size">A+</button>
+          <button class="ctrl-btn" onclick="copySummaryText()" title="Copy entire text">📋 Copy</button>
+          <a id="dedicated-link" href="the-murder-artist.html" class="ctrl-btn">📄 Dedicated Page</a>
+          <a id="raw-link" href="the-murder-artist.md" target="_blank" class="ctrl-btn">📝 Raw .md</a>
+        </div>
+      </div>
+
+      <nav class="novel-tabs-bar" aria-label="Novel selection tabs">
+<button class="novel-tab-btn active-tab" id="tab-the-murder-artist" onclick="selectNovel('the-murder-artist')">The Murder Artist</button>
+<button class="novel-tab-btn " id="tab-the-adventures-of-tom-sawyer" onclick="selectNovel('the-adventures-of-tom-sawyer')">The Adventures of Tom Sawyer</button>
+<button class="novel-tab-btn " id="tab-adventures-of-huckleberry-finn" onclick="selectNovel('adventures-of-huckleberry-finn')">Adventures of Huckleberry Finn</button>
+      </nav>
+
+      <article class="content-article" id="novel-reader-body">
+<h1 class="novel-title-main">The Murder Artist — Comprehensive Novel Summary & Critical Analysis</h1>
+<p><strong>Author:</strong> John Case (Jim & Carolyn Hougan) | <strong>Genre:</strong> Crime Fiction / Psychological Thriller | <strong>Language:</strong> English (Published: 2004)</p>
+<hr class="divider">
+<h3 class="novel-section-heading">1. Bibliographic Metadata & Overview</h3>
+<ul class="summary-list">
+  <li class="summary-item"><strong>Title:</strong> The Murder Artist</li>
+  <li class="summary-item"><strong>Authors:</strong> John Case (joint pseudonym of investigative journalists Jim Hougan and Carolyn Hougan)</li>
+  <li class="summary-item"><strong>Publication Date:</strong> 2004 (Ballantine Books / Random House)</li>
+  <li class="summary-item"><strong>Protagonist:</strong> Alex Callahan — Veteran television correspondent for a major news network</li>
+  <li class="summary-item"><strong>Core Subject:</strong> Parental devotion, psychological trauma, stage illusion, and serial abduction</li>
+  <li class="summary-item"><strong>Geographic Settings:</strong> Annapolis (Maryland), Crownsville, Washington D.C., New Orleans bayous (Louisiana), San Francisco Bay Area</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">2. Dramatis Personae</h3>
+<ul class="summary-list">
+  <li class="summary-item"><strong>Alex Callahan:</strong> A hardened investigative foreign correspondent accustomed to witnessing global bloodshed without breaking down.</li>
+  <li class="summary-item"><strong>Sean & Kevin Callahan:</strong> Alex’s cherished six-year-old twin sons whose sudden disappearance shatters his detached existence.</li>
+  <li class="summary-item"><strong>Liz Callahan:</strong> Alex’s estranged ex-wife, engaged in a bitter custody dispute while grappling with guilt and panic.</li>
+  <li class="summary-item"><strong>"The Piper" / "The Murder Artist":</strong> An elusive, psychopathic criminal mastermind with deep roots in professional stage illusion.</li>
+  <li class="summary-item"><strong>Detective Frank Varga:</strong> Annapolis homicide investigator initially heading the missing persons case, hampered by protocol.</li>
+  <li class="summary-item"><strong>Agent Marcus Torres:</strong> FBI lead investigator on the child abduction task force who erroneously focuses on Alex as a suspect.</li>
+  <li class="summary-item"><strong>Papa Joe / Mambo Marie:</strong> Louisiana bayou voodoo practitioners holding crucial esoteric keys to the killer’s occult rituals.</li>
+  <li class="summary-item"><strong>Harry Ross:</strong> Alex’s loyal network television producer who risks his career to provide clandestine newsroom research tools.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">3. Narrative Inciting Incident: The Maryland Renaissance Festival</h3>
+<ul class="summary-list">
+  <li class="summary-item">Alex Callahan picks up Kevin and Sean for his scheduled custody weekend, hoping to rebuild their familial bond.</li>
+  <li class="summary-item">To celebrate their time together, Alex takes the twin boys to the bustling Maryland Renaissance Festival in Crownsville.</li>
+  <li class="summary-item">Surrounded by costumed minstrels, jousting tournaments, and dense crowds, the boys marvel at the festive pageantry.</li>
+  <li class="summary-item">Alex turns his back for mere seconds to purchase cold drinks amidst the pressing, noisy festival crowd.</li>
+  <li class="summary-item">When he turns around, both boys have completely vanished into thin air without a sound, struggle, or alert.</li>
+  <li class="summary-item">Panicked search parties and festival security immediately seal the exits, but find no trace of the missing children.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">4. The Crime Scene & Cryptic Calling Cards</h3>
+<ul class="summary-list">
+  <li class="summary-item">Despondent and desperate, Alex returns to his home in Annapolis to await incoming ransom demands or phone calls.</li>
+  <li class="summary-item">Inside the quiet house, Alex discovers unmistakable signs of a deliberate, terrifyingly calculated trespass.</li>
+  <li class="summary-item">Resting upon a table is a small clear glass bowl filled to the brim with undisturbed, pristine water.</li>
+  <li class="summary-item">Next to the bowl sits a meticulously crafted origami figure of a rabbit, folded with surgical, artistic precision.</li>
+  <li class="summary-item">Arranged in two perfectly parallel rows are antique silver Mercury dimes, positioned side by side like miniature tombstones.</li>
+  <li class="summary-item">A discarded child’s undershirt bearing fresh droplets of blood confirms that the perpetrator has penetrated his inner sanctum.</li>
+  <li class="summary-item">Local police and federal agents inspect the residence but dismiss the artifacts as bizarre or staged by Alex himself.</li>
+  <li class="summary-item">Recognizing law enforcement’s fatal skepticism and bureaucratic delays, Alex realizes he must hunt the kidnapper alone.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">5. Uncovering the Serial Twin Abduction Pattern</h3>
+<ul class="summary-list">
+  <li class="summary-item">Drawing upon his seasoned investigative reporting background, Alex begins scouring national missing child databases.</li>
+  <li class="summary-item">With help from producer Harry Ross, Alex accesses unredacted police wires, crime morgue photos, and regional archives.</li>
+  <li class="summary-item">A horrifying nationwide pattern emerges: every few years, sets of identical or fraternal twin boys have disappeared.</li>
+  <li class="summary-item">In past cold cases across Virginia, Illinois, and Pennsylvania, investigators discovered identical origami animals and silver dimes.</li>
+  <li class="summary-item">Previous twin victims were ultimately found drowned or sacrificed in ritualistic, tableau-like arrangements months after abduction.</li>
+  <li class="summary-item">Alex discovers that forensic profilers privately refer to this phantom killer as "The Piper" due to his luring of innocent youth.</li>
+  <li class="summary-item">Alex calculates a terrifying timeline: the Piper keeps his captive twins alive for several weeks before completing his ritual.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">6. Journey into the Occult Underworld of Louisiana</h3>
+<ul class="summary-list">
+  <li class="summary-item">Following an antique coin dealer lead connected to the Mercury dimes, Alex traces the collector trail down to New Orleans.</li>
+  <li class="summary-item">In the French Quarter, esoteric historians and antique traders point Alex toward syncretic Afro-Caribbean religious rites.</li>
+  <li class="summary-item">Alex journeys deep into the misty, isolated swamplands of the Louisiana bayou to consult with revered voodoo practitioner Papa Joe.</li>
+  <li class="summary-item">To earn the practitioner’s sacred trust and decipher the symbolic ritual, Alex is forced to undergo an agonizing ordeal.</li>
+  <li class="summary-item">Alex is bound, placed into an unadorned wooden coffin, and buried alive in the swamp muck in a mock ritual of death and rebirth.</li>
+  <li class="summary-item">Emerging from the claustrophobic nightmare, Alex learns that the Piper views twins as metaphysical mirrors of a unified soul.</li>
+  <li class="summary-item">In the killer’s twisted cosmology, extinguishing both lives simultaneously captures the spiritual essence of divine perfection.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">7. The Climax: California Sanctuary & The Illusionist Exposed</h3>
+<ul class="summary-list">
+  <li class="summary-item">Alex connects the intricate stagecraft, secret compartments, and origami techniques to a reclusive former professional illusionist.</li>
+  <li class="summary-item">The hunt leads him across the continent to an isolated, architecturally complex estate nestled in coastal Northern California.</li>
+  <li class="summary-item">Alex infiltrates the fortress-like sanctuary, discovering a surreal maze of optical illusions, hidden passages, and soundproof chambers.</li>
+  <li class="summary-item">He discovers Kevin and Sean imprisoned in custom acrylic glass enclosures, terrified but still alive and physically unharmed.</li>
+  <li class="summary-item">The Piper emerges, revealing his grandiose delusion of transforming physical murder into sublime, transcendent fine art.</li>
+  <li class="summary-item">A violent, desperate struggle erupts as Alex charges the killer, overcoming theatrical flash powder and concealed blade traps.</li>
+  <li class="summary-item">Alex leverages brutal hand-to-hand combat to incapacitate the Piper, smashing the holding cells to retrieve his weeping sons.</li>
+  <li class="summary-item">Police and emergency medical teams arrive at the compound following distress transmissions sent by Alex’s network contacts.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">8. The Aftermath & Lingering Shadows</h3>
+<ul class="summary-list">
+  <li class="summary-item">The twin boys are rushed to emergency pediatric care, suffering from acute dehydration and shock but free of physical mutilation.</li>
+  <li class="summary-item">Alex and Liz reunite at the hospital bedside, their past marital rancor dissolved in shared gratitude and tearful relief.</li>
+  <li class="summary-item">Forensic sweeps of the California compound reveal remnants of past unsolved crimes, providing closure to grieving families nationwide.</li>
+  <li class="summary-item">Despite the successful rescue, Alex is left haunted by the razor-thin margin between survival and utter destruction.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">9. Thematic Analysis & Critical Legacy</h3>
+<ul class="summary-list">
+  <li class="summary-item"><strong>Paternal Resolve:</strong> Portrays fatherhood not as a passive condition, but as an unrelenting, instinctual survival force.</li>
+  <li class="summary-item"><strong>Vulnerability of Modern Childhood:</strong> Highlights how quickly predatory malice can pierce the mundane facade of suburban safety.</li>
+  <li class="summary-item"><strong>The Aestheticization of Evil:</strong> Explores the macabre psychosis of viewing human life as raw material for theatrical performance.</li>
+  <li class="summary-item"><strong>Critique of Bureaucracy:</strong> Demonstrates how institutional inertia and procedural rigidity frequently fail victims in acute crises.</li>
+  <li class="summary-item"><strong>Literary Craft:</strong> Combines intricate investigative journalism tropes with noir atmosphere and breakneck cinematic pacing.</li>
+  <li class="summary-item"><strong>Authorial Rigor:</strong> Jim and Carolyn Hougan weave genuine journalistic authenticity into every forensic and occult deduction.</li>
+  <li class="summary-item">John Case delivers a pulse-pounding masterpiece blending forensic procedurals, psychological horror, and occult mythology.</li>
+</ul>
+      </article>
+    </section>
+
+    <!-- Overview Table -->
+    <section id="catalog-table" style="margin-top: 3.5rem;">
+      <h2 class="section-title">📋 Repository Index & Overview</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Novel Name</th>
+              <th>Author</th>
+              <th>Genre</th>
+              <th>Language</th>
+              <th>Reading Links</th>
+              <th>Verification</th>
+            </tr>
+          </thead>
+          <tbody>
+<tr><td><strong>The Murder Artist</strong></td><td>John Case</td><td><span class="badge badge-primary">Crime</span></td><td>English</td><td><a href="the-murder-artist.html"><strong>Read HTML</strong></a> &bull; <a href="the-murder-artist.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td><strong>The Adventures of Tom Sawyer</strong></td><td>Mark Twain</td><td><span class="badge badge-primary">bildungsroman</span></td><td>English</td><td><a href="the-adventures-of-tom-sawyer.html"><strong>Read HTML</strong></a> &bull; <a href="the-adventures-of-tom-sawyer.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td><strong>Adventures of Huckleberry Finn</strong></td><td>Mark Twain</td><td><span class="badge badge-primary">bildungsroman</span></td><td>English</td><td><a href="adventures-of-huckleberry-finn.html"><strong>Read HTML</strong></a> &bull; <a href="adventures-of-huckleberry-finn.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Novels Summary Archive</strong> &bull; Version <span class="version-pill" style="font-size: 0.7rem; padding: 0.1rem 0.45rem;">v1.2.0</span>
+      </div>
+      <div class="footer-links">
+        <a href="#reader">Interactive Reader</a> &bull;
+        <a href="#catalog-table">Catalog Table</a> &bull;
+        <a href="https://github.com/govindarajanv/novels" target="_blank" rel="noopener noreferrer">Source Code</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const NOVELS_DATA = {"the-murder-artist": {"name": "The Murder Artist", "author": "John Case", "genre": "Crime", "language": "English", "slug": "the-murder-artist", "html": "<h1 class=\"novel-title-main\">The Murder Artist \u2014 Comprehensive Novel Summary & Critical Analysis</h1>\n<p><strong>Author:</strong> John Case (Jim & Carolyn Hougan) | <strong>Genre:</strong> Crime Fiction / Psychological Thriller | <strong>Language:</strong> English (Published: 2004)</p>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">1. Bibliographic Metadata & Overview</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\"><strong>Title:</strong> The Murder Artist</li>\n  <li class=\"summary-item\"><strong>Authors:</strong> John Case (joint pseudonym of investigative journalists Jim Hougan and Carolyn Hougan)</li>\n  <li class=\"summary-item\"><strong>Publication Date:</strong> 2004 (Ballantine Books / Random House)</li>\n  <li class=\"summary-item\"><strong>Protagonist:</strong> Alex Callahan \u2014 Veteran television correspondent for a major news network</li>\n  <li class=\"summary-item\"><strong>Core Subject:</strong> Parental devotion, psychological trauma, stage illusion, and serial abduction</li>\n  <li class=\"summary-item\"><strong>Geographic Settings:</strong> Annapolis (Maryland), Crownsville, Washington D.C., New Orleans bayous (Louisiana), San Francisco Bay Area</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">2. Dramatis Personae</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\"><strong>Alex Callahan:</strong> A hardened investigative foreign correspondent accustomed to witnessing global bloodshed without breaking down.</li>\n  <li class=\"summary-item\"><strong>Sean & Kevin Callahan:</strong> Alex\u2019s cherished six-year-old twin sons whose sudden disappearance shatters his detached existence.</li>\n  <li class=\"summary-item\"><strong>Liz Callahan:</strong> Alex\u2019s estranged ex-wife, engaged in a bitter custody dispute while grappling with guilt and panic.</li>\n  <li class=\"summary-item\"><strong>\"The Piper\" / \"The Murder Artist\":</strong> An elusive, psychopathic criminal mastermind with deep roots in professional stage illusion.</li>\n  <li class=\"summary-item\"><strong>Detective Frank Varga:</strong> Annapolis homicide investigator initially heading the missing persons case, hampered by protocol.</li>\n  <li class=\"summary-item\"><strong>Agent Marcus Torres:</strong> FBI lead investigator on the child abduction task force who erroneously focuses on Alex as a suspect.</li>\n  <li class=\"summary-item\"><strong>Papa Joe / Mambo Marie:</strong> Louisiana bayou voodoo practitioners holding crucial esoteric keys to the killer\u2019s occult rituals.</li>\n  <li class=\"summary-item\"><strong>Harry Ross:</strong> Alex\u2019s loyal network television producer who risks his career to provide clandestine newsroom research tools.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">3. Narrative Inciting Incident: The Maryland Renaissance Festival</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Alex Callahan picks up Kevin and Sean for his scheduled custody weekend, hoping to rebuild their familial bond.</li>\n  <li class=\"summary-item\">To celebrate their time together, Alex takes the twin boys to the bustling Maryland Renaissance Festival in Crownsville.</li>\n  <li class=\"summary-item\">Surrounded by costumed minstrels, jousting tournaments, and dense crowds, the boys marvel at the festive pageantry.</li>\n  <li class=\"summary-item\">Alex turns his back for mere seconds to purchase cold drinks amidst the pressing, noisy festival crowd.</li>\n  <li class=\"summary-item\">When he turns around, both boys have completely vanished into thin air without a sound, struggle, or alert.</li>\n  <li class=\"summary-item\">Panicked search parties and festival security immediately seal the exits, but find no trace of the missing children.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">4. The Crime Scene & Cryptic Calling Cards</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Despondent and desperate, Alex returns to his home in Annapolis to await incoming ransom demands or phone calls.</li>\n  <li class=\"summary-item\">Inside the quiet house, Alex discovers unmistakable signs of a deliberate, terrifyingly calculated trespass.</li>\n  <li class=\"summary-item\">Resting upon a table is a small clear glass bowl filled to the brim with undisturbed, pristine water.</li>\n  <li class=\"summary-item\">Next to the bowl sits a meticulously crafted origami figure of a rabbit, folded with surgical, artistic precision.</li>\n  <li class=\"summary-item\">Arranged in two perfectly parallel rows are antique silver Mercury dimes, positioned side by side like miniature tombstones.</li>\n  <li class=\"summary-item\">A discarded child\u2019s undershirt bearing fresh droplets of blood confirms that the perpetrator has penetrated his inner sanctum.</li>\n  <li class=\"summary-item\">Local police and federal agents inspect the residence but dismiss the artifacts as bizarre or staged by Alex himself.</li>\n  <li class=\"summary-item\">Recognizing law enforcement\u2019s fatal skepticism and bureaucratic delays, Alex realizes he must hunt the kidnapper alone.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">5. Uncovering the Serial Twin Abduction Pattern</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Drawing upon his seasoned investigative reporting background, Alex begins scouring national missing child databases.</li>\n  <li class=\"summary-item\">With help from producer Harry Ross, Alex accesses unredacted police wires, crime morgue photos, and regional archives.</li>\n  <li class=\"summary-item\">A horrifying nationwide pattern emerges: every few years, sets of identical or fraternal twin boys have disappeared.</li>\n  <li class=\"summary-item\">In past cold cases across Virginia, Illinois, and Pennsylvania, investigators discovered identical origami animals and silver dimes.</li>\n  <li class=\"summary-item\">Previous twin victims were ultimately found drowned or sacrificed in ritualistic, tableau-like arrangements months after abduction.</li>\n  <li class=\"summary-item\">Alex discovers that forensic profilers privately refer to this phantom killer as \"The Piper\" due to his luring of innocent youth.</li>\n  <li class=\"summary-item\">Alex calculates a terrifying timeline: the Piper keeps his captive twins alive for several weeks before completing his ritual.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">6. Journey into the Occult Underworld of Louisiana</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Following an antique coin dealer lead connected to the Mercury dimes, Alex traces the collector trail down to New Orleans.</li>\n  <li class=\"summary-item\">In the French Quarter, esoteric historians and antique traders point Alex toward syncretic Afro-Caribbean religious rites.</li>\n  <li class=\"summary-item\">Alex journeys deep into the misty, isolated swamplands of the Louisiana bayou to consult with revered voodoo practitioner Papa Joe.</li>\n  <li class=\"summary-item\">To earn the practitioner\u2019s sacred trust and decipher the symbolic ritual, Alex is forced to undergo an agonizing ordeal.</li>\n  <li class=\"summary-item\">Alex is bound, placed into an unadorned wooden coffin, and buried alive in the swamp muck in a mock ritual of death and rebirth.</li>\n  <li class=\"summary-item\">Emerging from the claustrophobic nightmare, Alex learns that the Piper views twins as metaphysical mirrors of a unified soul.</li>\n  <li class=\"summary-item\">In the killer\u2019s twisted cosmology, extinguishing both lives simultaneously captures the spiritual essence of divine perfection.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">7. The Climax: California Sanctuary & The Illusionist Exposed</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Alex connects the intricate stagecraft, secret compartments, and origami techniques to a reclusive former professional illusionist.</li>\n  <li class=\"summary-item\">The hunt leads him across the continent to an isolated, architecturally complex estate nestled in coastal Northern California.</li>\n  <li class=\"summary-item\">Alex infiltrates the fortress-like sanctuary, discovering a surreal maze of optical illusions, hidden passages, and soundproof chambers.</li>\n  <li class=\"summary-item\">He discovers Kevin and Sean imprisoned in custom acrylic glass enclosures, terrified but still alive and physically unharmed.</li>\n  <li class=\"summary-item\">The Piper emerges, revealing his grandiose delusion of transforming physical murder into sublime, transcendent fine art.</li>\n  <li class=\"summary-item\">A violent, desperate struggle erupts as Alex charges the killer, overcoming theatrical flash powder and concealed blade traps.</li>\n  <li class=\"summary-item\">Alex leverages brutal hand-to-hand combat to incapacitate the Piper, smashing the holding cells to retrieve his weeping sons.</li>\n  <li class=\"summary-item\">Police and emergency medical teams arrive at the compound following distress transmissions sent by Alex\u2019s network contacts.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">8. The Aftermath & Lingering Shadows</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">The twin boys are rushed to emergency pediatric care, suffering from acute dehydration and shock but free of physical mutilation.</li>\n  <li class=\"summary-item\">Alex and Liz reunite at the hospital bedside, their past marital rancor dissolved in shared gratitude and tearful relief.</li>\n  <li class=\"summary-item\">Forensic sweeps of the California compound reveal remnants of past unsolved crimes, providing closure to grieving families nationwide.</li>\n  <li class=\"summary-item\">Despite the successful rescue, Alex is left haunted by the razor-thin margin between survival and utter destruction.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">9. Thematic Analysis & Critical Legacy</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\"><strong>Paternal Resolve:</strong> Portrays fatherhood not as a passive condition, but as an unrelenting, instinctual survival force.</li>\n  <li class=\"summary-item\"><strong>Vulnerability of Modern Childhood:</strong> Highlights how quickly predatory malice can pierce the mundane facade of suburban safety.</li>\n  <li class=\"summary-item\"><strong>The Aestheticization of Evil:</strong> Explores the macabre psychosis of viewing human life as raw material for theatrical performance.</li>\n  <li class=\"summary-item\"><strong>Critique of Bureaucracy:</strong> Demonstrates how institutional inertia and procedural rigidity frequently fail victims in acute crises.</li>\n  <li class=\"summary-item\"><strong>Literary Craft:</strong> Combines intricate investigative journalism tropes with noir atmosphere and breakneck cinematic pacing.</li>\n  <li class=\"summary-item\"><strong>Authorial Rigor:</strong> Jim and Carolyn Hougan weave genuine journalistic authenticity into every forensic and occult deduction.</li>\n  <li class=\"summary-item\">John Case delivers a pulse-pounding masterpiece blending forensic procedurals, psychological horror, and occult mythology.</li>\n</ul>"}, "the-adventures-of-tom-sawyer": {"name": "The Adventures of Tom Sawyer", "author": "Mark Twain", "genre": "bildungsroman", "language": "English", "slug": "the-adventures-of-tom-sawyer", "html": "<h1 class=\"novel-title-main\">The Adventures of Tom Sawyer \u2014 Comprehensive Novel Summary & Critical Analysis</h1>\n<p><strong>Author:</strong> Mark Twain (Samuel Langhorne Clemens) | <strong>Genre:</strong> Bildungsroman / Adventure | <strong>Language:</strong> English (Published: 1876)</p>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">1. Bibliographic Metadata & Overview</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\"><strong>Title:</strong> The Adventures of Tom Sawyer</li>\n  <li class=\"summary-item\"><strong>Author:</strong> Mark Twain (pseudonym of Samuel Langhorne Clemens, 1835\u20131910)</li>\n  <li class=\"summary-item\"><strong>Publication Date:</strong> 1876 (American Publishing Company, Hartford, Connecticut)</li>\n  <li class=\"summary-item\"><strong>Protagonist:</strong> Thomas \"Tom\" Sawyer \u2014 An imaginative, mischievous, and good-hearted Missouri youth</li>\n  <li class=\"summary-item\"><strong>Setting & Epoch:</strong> St. Petersburg (modeled on Hannibal, Missouri) along the Mississippi River during the 1840s</li>\n  <li class=\"summary-item\"><strong>Literary Mode:</strong> Picaresque adventure, coming-of-age Bildungsroman, and satirical pastoral comedy</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">2. Dramatis Personae</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\"><strong>Tom Sawyer:</strong> The clever orphan hero whose vivid romantic imagination repeatedly clashes with adult authority.</li>\n  <li class=\"summary-item\"><strong>Huckleberry Finn:</strong> The outcast son of the town drunkard, admired by schoolboys for his radical freedom.</li>\n  <li class=\"summary-item\"><strong>Aunt Polly:</strong> Tom\u2019s loving, devout maternal aunt who struggles constantly between stern discipline and tender affection.</li>\n  <li class=\"summary-item\"><strong>Becky Thatcher:</strong> The judge's lovely daughter whose courtship with Tom alternates between juvenile jealousy and devoted romance.</li>\n  <li class=\"summary-item\"><strong>Injun Joe:</strong> A vengeful, ruthless half-Native American outcast who commits murder and terrorizes the community.</li>\n  <li class=\"summary-item\"><strong>Muff Potter:</strong> A kindly, naive, alcoholic fisherman falsely framed by Injun Joe for Dr. Robinson's murder.</li>\n  <li class=\"summary-item\"><strong>Dr. Robinson:</strong> A young physician murdered while hiring grave robbers for anatomical study specimens.</li>\n  <li class=\"summary-item\"><strong>Joe Harper & Sid Sawyer:</strong> Joe is Tom\u2019s best friend and pirate comrade; Sid is Tom\u2019s spiteful, well-behaved half-brother.</li>\n  <li class=\"summary-item\"><strong>Widow Douglas & Judge Thatcher:</strong> Pillar community elders who represent Christian charity and civic law respectively.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">3. Boyhood in St. Petersburg & The Whitewashed Fence</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Tom skips Friday school to go swimming, leading Aunt Polly to sentence him to whitewash thirty yards of board fence on Saturday.</li>\n  <li class=\"summary-item\">Despairing at losing his holiday, Tom brilliantly feigns that painting the fence is an exclusive, delightful privilege.</li>\n  <li class=\"summary-item\">Passing village boys beg for a turn, bribing Tom with an apple, a kite, marbles, and a dead rat with a string.</li>\n  <li class=\"summary-item\">By afternoon, the fence has three coats of whitewash, and Tom is enriched with boyhood trinkets while resting in the shade.</li>\n  <li class=\"summary-item\">At Sunday school, Tom trades his acquired booty for colored tickets, fraudulently claiming a prized Dor\u00e9 Bible before the congregation.</li>\n  <li class=\"summary-item\">Tom falls head-over-heels in love with newcomer Becky Thatcher, winning her heart with a brass doorknob until an ex-flame is revealed.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">4. The Midnight Graveyard Murder & The Blood Oath</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Tom joins Huck Finn at midnight in the town cemetery to test a superstitious ritual curing warts with a dead cat.</li>\n  <li class=\"summary-item\">Hiding behind headstones, the terrified boys witness Dr. Robinson arrive with Injun Joe and Muff Potter to rob a fresh grave.</li>\n  <li class=\"summary-item\">A violent dispute over extortionate payment erupts; Potter is knocked unconscious in the ensuing drunken melee.</li>\n  <li class=\"summary-item\">Injun Joe stabs Dr. Robinson to death using Potter's dropped clasp-knife, calmly planting the bloody weapon in Muff\u2019s limp hand.</li>\n  <li class=\"summary-item\">When Potter regains consciousness, Injun Joe deceitfully convinces the drunken man that he butchered the doctor in a stupor.</li>\n  <li class=\"summary-item\">Horrified, Tom and Huck flee to a deserted tannery and swear a solemn blood oath on a pine shingle never to reveal what they saw.</li>\n  <li class=\"summary-item\">Muff Potter is arrested and jailed; Tom is wracked by terrible nightmares and moral guilt, bringing comforts to Muff's cell window.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">5. Jackson's Island Pirates & The Triumphant Funeral</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Feeling unappreciated and rejected by Becky, Tom recruits Joe Harper and Huck Finn to escape society and become pirates.</li>\n  <li class=\"summary-item\">The trio steals a raft and paddles down the Mississippi to Jackson\u2019s Island, setting up camp around an open campfire.</li>\n  <li class=\"summary-item\">They spend joyous days swimming, fishing, and smoking tobacco leaves until homesickness and a severe thunderstorm strike.</li>\n  <li class=\"summary-item\">Tom sneaks back to town by night, hiding under Aunt Polly\u2019s bed to overhear family members weeping and preparing their funeral sermon.</li>\n  <li class=\"summary-item\">On Sunday morning, while the St. Petersburg congregation sings elegies for the lost youths, the three boys march down the church aisle.</li>\n  <li class=\"summary-item\">The assembly breaks into euphoric tears and joyful hymns, welcoming the resurrected runaways in a moment of communal celebration.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">6. Gallantry at School & The Trial of Muff Potter</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Back at school, Tom catches Becky accidentally tearing a page from the schoolmaster\u2019s private medical anatomy book.</li>\n  <li class=\"summary-item\">When Master Dobbins demands to know the culprit, Tom gallantly shouts that he did it, enduring a savage thrashing to shield Becky.</li>\n  <li class=\"summary-item\">Muff Potter\u2019s murder trial commences; the doomed defendant offers no defense as town prejudice and circumstantial evidence mount.</li>\n  <li class=\"summary-item\">Unable to stomach an innocent man hanging for Injun Joe's crime, Tom breaks his blood oath and takes the witness stand.</li>\n  <li class=\"summary-item\">Tom narrates the terrifying graveyard confrontation; hearing his guilt exposed, Injun Joe leaps through a window and vanishes.</li>\n  <li class=\"summary-item\">Tom is lionized as a brave town hero by day, but endures sleepless nights terrified that the fugitive Joe will return for vengeance.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">7. The Haunted House, Injun Joe's Gold & McDougal's Cave</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Tom and Huck hunt for buried treasure in a decaying haunted house, exploring upstairs when two scoundrels unexpectedly enter below.</li>\n  <li class=\"summary-item\">Peering through floorboards, they discover one man is Injun Joe in disguise, plotting revenge and unearthing thousands in stolen gold.</li>\n  <li class=\"summary-item\">The boys track the villains; Huck tails Joe to Widow Douglas\u2019s estate, alerting the Welshman and foiling a mutilation attack.</li>\n  <li class=\"summary-item\">Concurrently, Tom, Becky, and classmates embark on a picnic exploring the boundless limestone corridors of McDougal\u2019s Cave.</li>\n  <li class=\"summary-item\">Tom and Becky wander deep into uncharted passages chasing bats, losing their way completely as their candle wax runs out.</li>\n  <li class=\"summary-item\">The town realizes the children are missing; organized search parties comb the dark subterranean chambers for three desperate days.</li>\n  <li class=\"summary-item\">While probing an abyss with a kite string, Tom encounters Injun Joe crouching in the shadows, but the villain retreats in darkness.</li>\n  <li class=\"summary-item\">Guided by Tom\u2019s tenacity and a faint speck of daylight, Tom finds a hidden egress five miles downriver, rescuing himself and Becky.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">8. The Sealed Gate, Injun Joe's Fate & Reclaimed Wealth</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Judge Thatcher orders McDougal's cave mouth securely padlocked with triple iron doors to prevent future accidents.</li>\n  <li class=\"summary-item\">When Tom hears of the closure two weeks later, he turns pale and informs the town that Injun Joe is trapped inside.</li>\n  <li class=\"summary-item\">Citizens unlock the gate and find Injun Joe dead on the threshold, having fruitlessly tried to hack through rock with his broken bowie knife.</li>\n  <li class=\"summary-item\">Tom and Huck re-enter the cave through the secret riverside fissure, locating Injun Joe\u2019s stash box marked by a black cross.</li>\n  <li class=\"summary-item\">They haul out over twelve thousand dollars in gold coin, which Judge Thatcher and the community invest for their lifelong futures.</li>\n  <li class=\"summary-item\">Widow Douglas formally adopts Huck, attempting to civilize him with clean garments, bedsheets, schoolbooks, and church attendance.</li>\n  <li class=\"summary-item\">Smothered by respectability, Huck flees back to an empty hogshead barrel until Tom promises him a place in his new robber gang.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">9. Thematic Analysis & Critical Legacy</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\"><strong>The Dual Nature of Boyhood:</strong> Balances idyllic, nostalgic romanticism with the chilling darkness of murder, vengeance, and terror.</li>\n  <li class=\"summary-item\"><strong>Conscience vs. Social Conformity:</strong> Tom\u2019s decision to testify highlights genuine ethical integrity over cowardly institutional silence.</li>\n  <li class=\"summary-item\"><strong>Satire of Frontier Institutions:</strong> Twain mercilessly parodies Sunday school dogma, rigid education, and bourgeois respectability.</li>\n  <li class=\"summary-item\"><strong>The Architecture of Imagination:</strong> Tom transforms mundane reality into theater through make-believe, pirate lore, and superstition.</li>\n  <li class=\"summary-item\"><strong>Pivotal American Masterwork:</strong> Established Samuel Clemens as the preeminent voice of American vernacular and Mississippi lore.</li>\n  <li class=\"summary-item\"><em>The Adventures of Tom Sawyer</em> remains an immortal portrait of youth, moral courage, and nineteenth-century frontier life.</li>\n</ul>"}, "adventures-of-huckleberry-finn": {"name": "Adventures of Huckleberry Finn", "author": "Mark Twain", "genre": "bildungsroman", "language": "English", "slug": "adventures-of-huckleberry-finn", "html": "<h1 class=\"novel-title-main\">Adventures of Huckleberry Finn \u2014 Comprehensive Novel Summary & Critical Analysis</h1>\n<p><strong>Author:</strong> Mark Twain (Samuel Langhorne Clemens) | <strong>Genre:</strong> Bildungsroman / Picaresque Satire | <strong>Language:</strong> English (Published: 1884/1885)</p>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">1. Bibliographic Metadata & Overview</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\"><strong>Title:</strong> Adventures of Huckleberry Finn (often styled as <em>The Adventures of Huckleberry Finn</em>)</li>\n  <li class=\"summary-item\"><strong>Author:</strong> Mark Twain (pseudonym of Samuel Langhorne Clemens, 1835\u20131910)</li>\n  <li class=\"summary-item\"><strong>Publication History:</strong> Chatto & Windus (UK, December 1884); Charles L. Webster & Co. (US, February 1885)</li>\n  <li class=\"summary-item\"><strong>Protagonist & Narrator:</strong> Huckleberry Finn \u2014 A resilient, uneducated, observant Missouri boy speaking in vernacular dialect</li>\n  <li class=\"summary-item\"><strong>Setting & Trajectory:</strong> The Mississippi River corridor through Missouri, Illinois, Kentucky, and Arkansas in the antebellum 1840s</li>\n  <li class=\"summary-item\"><strong>Literary Significance:</strong> Foundational milestone of American literature celebrated for its vernacular voice and scathing moral satire</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">2. Dramatis Personae</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\"><strong>Huckleberry Finn:</strong> The pragmatic narrator who struggles between social conditioning and his instinctive moral compass.</li>\n  <li class=\"summary-item\"><strong>Jim:</strong> Miss Watson\u2019s runaway slave whose humanity, fatherly warmth, and dignity form the moral center of the novel.</li>\n  <li class=\"summary-item\"><strong>Pap Finn:</strong> Huck\u2019s vicious, drunken, illiterate father who violently abuses Huck and covets his custody treasure money.</li>\n  <li class=\"summary-item\"><strong>Tom Sawyer:</strong> Huck\u2019s romantic foil who views life through adventure novels, imposing elaborate theatrical games on reality.</li>\n  <li class=\"summary-item\"><strong>Widow Douglas & Miss Watson:</strong> Sisters attempting to civilize and catechize Huck; Miss Watson triggers Jim\u2019s escape by planning his sale.</li>\n  <li class=\"summary-item\"><strong>The Duke & The King (Dauphin):</strong> Pair of rapacious confidence tricksters who usurp Huck and Jim\u2019s raft for opportunistic frauds.</li>\n  <li class=\"summary-item\"><strong>The Grangerfords & Shepherdsons:</strong> Wealthy aristocratic Southern families engaged in a mindless, bloody multi-generational feud.</li>\n  <li class=\"summary-item\"><strong>Mary Jane Wilks:</strong> Compassionate orphaned heiress targeted by the Duke and King, whose distress spurs Huck\u2019s ethical intervention.</li>\n  <li class=\"summary-item\"><strong>Colonel Sherburn & Boggs:</strong> Sherburn is an imperious aristocrat who shoots the town drunk Boggs and shames a lynch mob.</li>\n  <li class=\"summary-item\"><strong>Silas & Sally Phelps:</strong> Tom Sawyer\u2019s pious, hospitable aunt and uncle whose Arkansas homestead holds Jim captive.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">3. Civilizing Huck, Pap's Abduction & Flight to Jackson's Island</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Living under Widow Douglas and Miss Watson, Huck rebels against stiff clothes, prayers, school, and stifling etiquette.</li>\n  <li class=\"summary-item\">Pap Finn reappears in St. Petersburg, demanding Judge Thatcher surrender Huck's six thousand dollars to fund his alcoholism.</li>\n  <li class=\"summary-item\">Pap kidnaps Huck to a desolate cabin in the Illinois backwoods, subjecting him to violent beatings and delirium tremens attacks.</li>\n  <li class=\"summary-item\">Fearing for his life, Huck fakes his murder by slaughtering a wild pig, smearing blood on an axe, and fleeing downriver in a canoe.</li>\n  <li class=\"summary-item\">Huck lands on uninhabited Jackson\u2019s Island, where he discovers Miss Watson's slave Jim hiding after overhearing plans to sell him to Orleans.</li>\n  <li class=\"summary-item\">Despite ingrained societal guilt about shielding an escaped slave, Huck promises Jim to keep his secret and stand by him.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">4. River Floating, The Flooded House & Disguise as Sarah Williams</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">A massive river flood brings a floating two-story house past the island; inside, Jim discovers a dead man shot in the back.</li>\n  <li class=\"summary-item\">Jim protects Huck from viewing the corpse\u2019s decomposed face, covering the body with rags while salvaging essential supplies.</li>\n  <li class=\"summary-item\">Needing intelligence, Huck dresses in a salvaged calico dress and visits newcomer Mrs. Judith Loftus under the alias Sarah Williams.</li>\n  <li class=\"summary-item\">The sharp-eyed woman exposes Huck\u2019s disguise through his clumsy needle-threading, but reveals men are searching Jackson's Island for Jim.</li>\n  <li class=\"summary-item\">Huck races back to camp, crying \"They're after us!\", and they load their raft to launch their long voyage down the Mississippi.</li>\n  <li class=\"summary-item\">Exploring the wrecked steamboat <em>Walter Scott</em>, they overhear murderers, escape on the criminals' skiff, and alert a watchman to save them.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">5. Fog, The Missed Ohio River & The Grangerford-Shepherdson Bloodshed</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Their navigational objective is Cairo, Illinois, where the Ohio River joins the Mississippi, allowing Jim to buy passage to free states.</li>\n  <li class=\"summary-item\">A blinding, disorienting fog separates Huck\u2019s canoe from the raft; when they reunite, Huck tries to deceive Jim into thinking it was a dream.</li>\n  <li class=\"summary-item\">Deeply wounded, Jim rebukes Huck for making a fool of a devoted friend, prompting Huck to humbly apologize to a black man.</li>\n  <li class=\"summary-item\">Conscience-stricken over aiding a fugitive, Huck prepares to turn Jim in, but bluffs slave hunters by hinting his raft carries smallpox.</li>\n  <li class=\"summary-item\">In dense nighttime fog, they miss Cairo; soon after, an oncoming steamboat collides with their raft, hurling both into the dark water.</li>\n  <li class=\"summary-item\">Huck swims ashore in Kentucky and is taken in by the wealthy Grangerfords, befriending their poetic, courageous young son Buck.</li>\n  <li class=\"summary-item\">Huck witnesses the grotesque absurdity of a feud where both clans attend church with guns before slaughtering each other in a bloodbath.</li>\n  <li class=\"summary-item\">Traumatized by watching Buck murdered, Huck flees back to the river where Jim has patiently repaired and hidden the raft.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">6. The Scoundrels Invade: The Duke, The Dauphin & The Wilks Swindle</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Huck rescues two fleeing grifters who claim aristocratic titles as an English Duke and the rightful King Louis XVII of France.</li>\n  <li class=\"summary-item\">Huck and Jim tolerate the arrogant impostors on the raft to avoid conflict, while the con men stage religious camp-meeting swindles.</li>\n  <li class=\"summary-item\">In Arkansas, the scoundrels produce the vulgar \"Royal Nonesuch\" scam, swindling townsfolk who retaliate with rotten eggs and dead cats.</li>\n  <li class=\"summary-item\">In another river hamlet, Huck witnesses Colonel Sherburn coldly shoot drunken Boggs, then humiliate a cowardly lynch mob on his porch.</li>\n  <li class=\"summary-item\">Learning of the death of wealthy Peter Wilks, the Duke and King impersonate his deaf-mute and preacher brothers to claim his inheritance.</li>\n  <li class=\"summary-item\">Disgusted by their cruelty toward the grieving Wilks nieces, Huck steals the bag of six thousand gold dollars and hides it in Wilks' coffin.</li>\n  <li class=\"summary-item\">Huck reveals the conspiracy to Mary Jane Wilks; when the true brothers arrive, the mob exhumes the corpse, allowing Huck and Jim to escape.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">7. The Great Crisis of Conscience: \"All right, then, I'll go to hell!\"</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Broke and furious, the King betrays Jim, selling his whereabouts for forty dollars to Silas Phelps\u2019s cotton farm near Pikesville.</li>\n  <li class=\"summary-item\">Huck agonizes over his soul, believing church doctrine that helping a slave escape condemns a person to eternal damnation.</li>\n  <li class=\"summary-item\">He writes a letter to Miss Watson reporting Jim\u2019s location, feeling temporarily virtuous and cleansed of sin.</li>\n  <li class=\"summary-item\">But recalling Jim\u2019s overwhelming kindness, loyalty, and tears of affection, Huck gazes at the paper in ultimate moral crisis.</li>\n  <li class=\"summary-item\">Huck declares, \"All right, then, I'll go to hell!\" and tears the paper to shreds, irrevocably committing to free his brother Jim.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">8. The Phelps Plantation, The Evasion & The Final Revelations</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\">Huck arrives at Phelps farm and is mistaken for nephew Tom Sawyer; when the real Tom arrives, he agrees to assist in freeing Jim.</li>\n  <li class=\"summary-item\">Instead of simply unlocking Jim\u2019s flimsy shed, Tom insists on a romantic \"evasion\" featuring rope ladders, snakes, and blood-inscribed coats.</li>\n  <li class=\"summary-item\">Jim patiently endures Tom\u2019s absurd romantic torment for weeks, while the Duke and King are tarred and feathered by vengeful locals.</li>\n  <li class=\"summary-item\">During the final armed escape, local farmers shoot at the fugitives, striking Tom in the leg; Jim refuses to abandon him in the swamp.</li>\n  <li class=\"summary-item\">Jim is recaptured in irons, but the doctor defends his selfless loyalty, testifying that Jim sacrificed his freedom to nurse young Tom.</li>\n  <li class=\"summary-item\">Recovering, Tom reveals that Miss Watson died two months earlier, repenting on her deathbed and setting Jim free in her will.</li>\n  <li class=\"summary-item\">Aunt Polly arrives to clarify identities; Jim confirms Pap is dead, and Huck resolves to light out for the Territory to avoid being civilized.</li>\n</ul>\n<hr class=\"divider\">\n<h3 class=\"novel-section-heading\">9. Thematic Analysis & Critical Legacy</h3>\n<ul class=\"summary-list\">\n  <li class=\"summary-item\"><strong>The Primacy of Intuitive Conscience:</strong> Chronicles a boy\u2019s innate decency triumphing over the diseased, institutionalized morality of slavery.</li>\n  <li class=\"summary-item\"><strong>The Raft as Democratic Sanctuary:</strong> The Mississippi raft serves as an egalitarian haven contrasted with the hypocrisy and violence ashore.</li>\n  <li class=\"summary-item\"><strong>Satire of Southern Romance:</strong> Mocks false European chivalry and feudal pretenses that fuel mindless blood feuds and lynch violence.</li>\n  <li class=\"summary-item\"><strong>Revolution of American Voice:</strong> Elevates the vernacular idiom into high literary art, liberating American literature from British mimicry.</li>\n  <li class=\"summary-item\"><strong>Hemingway's Tribute:</strong> Ernest Hemingway famously asserted that all modern American literature comes from one book called <em>Huckleberry Finn</em>.</li>\n  <li class=\"summary-item\">A monument of world literature, <em>Adventures of Huckleberry Finn</em> endures as a profound meditation on freedom, humanity, and justice.</li>\n</ul>"}};
+
+    function selectNovel(slug, smoothScroll = false) {
+      const data = NOVELS_DATA[slug];
+      if (!data) return;
+
+      document.getElementById('current-novel-heading').innerText = data.name;
+      document.getElementById('reader-genre').innerText = data.genre;
+      document.getElementById('reader-language').innerText = data.language;
+      document.getElementById('novel-reader-body').innerHTML = data.html;
+      document.getElementById('dedicated-link').href = data.slug + '.html';
+      document.getElementById('raw-link').href = data.slug + '.md';
+
+      document.querySelectorAll('.novel-tab-btn').forEach(btn => btn.classList.remove('active-tab'));
+      const activeTab = document.getElementById('tab-' + slug);
+      if (activeTab) activeTab.classList.add('active-tab');
+
+      document.querySelectorAll('.novel-card').forEach(card => card.classList.remove('active-card'));
+      const activeCard = document.getElementById('card-' + slug);
+      if (activeCard) activeCard.classList.add('active-card');
+
+      if (history.replaceState) {
+        history.replaceState(null, null, '#' + slug);
+      }
+
+      if (smoothScroll) {
+        const readerElem = document.getElementById('reader');
+        if (readerElem) {
+          readerElem.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (NOVELS_DATA[hash]) {
+        selectNovel(hash, true);
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (NOVELS_DATA[hash]) {
+        selectNovel(hash, false);
+      }
+    });
+  </script>
+
+<script>
+  function initTheme() {
+    const saved = localStorage.getItem('novel_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeBtn(saved);
+  }
+
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('novel_theme', next);
+    updateThemeBtn(next);
+  }
+
+  function updateThemeBtn(theme) {
+    const btns = document.querySelectorAll('.theme-toggle-btn');
+    btns.forEach(btn => {
+      btn.innerHTML = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    });
+  }
+
+  let currentFontSize = 1.02;
+  function changeFontSize(delta) {
+    currentFontSize = Math.max(0.85, Math.min(1.4, currentFontSize + delta));
+    document.documentElement.style.setProperty('--article-font-size', currentFontSize + 'rem');
+  }
+
+  function copySummaryText() {
+    const article = document.querySelector('.content-article');
+    if (!article) return;
+    navigator.clipboard.writeText(article.innerText).then(() => {
+      showToast('Summary copied to clipboard!');
+    });
+  }
+
+  function showToast(msg) {
+    let toast = document.getElementById('app-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'app-toast';
+      toast.className = 'toast';
+      document.body.appendChild(toast);
+    }
+    toast.innerText = msg;
+    toast.style.display = 'block';
+    setTimeout(() => { toast.style.display = 'none'; }, 2400);
+  }
+
+  document.addEventListener('DOMContentLoaded', initTheme);
+</script>
+
+</body>
+</html>

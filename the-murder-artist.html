@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Murder Artist — 100-Line Summary & Analysis</title>
+  <meta name="description" content="Comprehensive 100-line summary, character dossier, and critical analysis of The Murder Artist by John Case.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --bg: #0b1120;
+      --surface: #1e293b;
+      --surface-hover: #334155;
+      --surface-card: #141f32;
+      --border: #334155;
+      --border-subtle: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.15);
+      --accent: #818cf8;
+      --accent-glow: rgba(129, 140, 248, 0.15);
+      --success: #34d399;
+      --success-glow: rgba(52, 211, 153, 0.15);
+      --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+      --card-hover-shadow: 0 14px 34px -4px rgba(56, 189, 248, 0.2);
+      --radius: 12px;
+      --radius-sm: 6px;
+      --article-font-size: 1.02rem;
+    }
+
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-hover: #f1f5f9;
+      --surface-card: #ffffff;
+      --border: #cbd5e1;
+      --border-subtle: #f1f5f9;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-faint: #94a3b8;
+      --primary: #0284c7;
+      --primary-glow: rgba(2, 132, 199, 0.12);
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.12);
+      --success: #059669;
+      --success-glow: rgba(5, 150, 105, 0.12);
+      --card-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.08);
+      --card-hover-shadow: 0 12px 28px -4px rgba(2, 132, 199, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: var(--primary-glow);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      font-size: 1.15rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+
+    .nav-link:hover { color: var(--primary); }
+
+    .theme-toggle-btn {
+      background: var(--surface-hover);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      padding: 0.4rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .version-pill {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--primary-glow);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      letter-spacing: 0.03em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1080px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      flex: 1;
+    }
+
+    /* Hero Section */
+    .site-hero {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-title {
+      font-size: 2.35rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.4rem;
+      background: linear-gradient(135deg, var(--text) 45%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .site-version-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .site-tagline {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 780px;
+      line-height: 1.6;
+    }
+
+    /* Stats Banner */
+    .stats-banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin: 1.75rem 0 2.25rem;
+      padding: 1.1rem 1.4rem;
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .stat-number {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text);
+      font-family: var(--font-mono);
+    }
+
+    /* Novels Grid */
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin: 2rem 0 1.25rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .novels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .novel-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative;
+    }
+
+    .novel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: var(--primary);
+    }
+
+    .novel-card.active-card {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px var(--primary-glow);
+    }
+
+    .novel-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--surface-hover);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .badge-primary {
+      background: var(--primary-glow);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .badge-success {
+      background: var(--success-glow);
+      color: var(--success);
+      border-color: var(--success);
+    }
+
+    .novel-card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.015em;
+    }
+
+    .novel-card-author {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .novel-card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.4rem;
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .novel-card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-read-in-page {
+      background: var(--primary);
+      color: #0b1120;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-read-in-page:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .card-secondary-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+    }
+
+    .card-secondary-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .card-secondary-links a:hover { color: var(--primary); }
+
+    /* Interactive In-Page Reader */
+    .reader-section {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 3rem;
+      scroll-margin-top: 5rem;
+    }
+
+    .reader-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .reader-title-area {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .reader-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+    }
+
+    .reader-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+      padding: 0.35rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      text-decoration: none;
+    }
+
+    .ctrl-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .novel-tabs-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+      background: var(--surface);
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+
+    .novel-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .novel-tab-btn:hover {
+      color: var(--text);
+      background: var(--surface-hover);
+    }
+
+    .novel-tab-btn.active-tab {
+      background: var(--primary-glow);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    /* Article Content Typography */
+    .content-article {
+      font-size: var(--article-font-size);
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .novel-title-main {
+      font-size: 1.95rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .novel-section-heading {
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1.85rem 0 0.85rem;
+      letter-spacing: -0.01em;
+      border-left: 3px solid var(--primary);
+      padding-left: 0.75rem;
+    }
+
+    .content-article h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+
+    .content-article p {
+      margin-bottom: 1.15rem;
+      color: var(--text);
+    }
+
+    .summary-list {
+      list-style-type: disc;
+      margin: 0.75rem 0 1.25rem 1.6rem;
+    }
+
+    .summary-item {
+      margin-bottom: 0.55rem;
+      padding-left: 0.2rem;
+    }
+
+    .summary-item strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .divider {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 2.2rem 0;
+    }
+
+    .content-article a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    .content-article a:hover { border-bottom-color: var(--primary); }
+
+    .content-article code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: var(--surface);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* Table */
+    .table-responsive {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.8rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--surface);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    tr:nth-child(even) {
+      background: var(--surface);
+    }
+
+    /* Standalone Novel Page Bar */
+    .back-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 0.45rem 0.9rem;
+      background: var(--primary-glow);
+      border: 1px solid var(--primary);
+      border-radius: var(--radius-sm);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .back-btn:hover {
+      background: var(--surface-hover);
+      transform: translateX(-2px);
+    }
+
+    .pagination-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 2.25rem 1.5rem;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover { color: var(--primary); }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--surface);
+      border: 1px solid var(--primary);
+      color: var(--text);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">📖</span>
+        <span>Novels Summary Archive</span>
+      </a>
+      <div class="nav-links">
+        <span class="version-pill">v1.2.0</span>
+        <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle theme">☀️ Light</button>
+        <a href="https://github.com/govindarajanv/novels" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="back-bar">
+      <a href="index.html" class="back-btn">← Back to Novels Index</a>
+      <div class="reader-controls">
+        <span class="badge badge-primary">Crime</span>
+        <span class="badge">English</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
+        <button class="ctrl-btn" onclick="changeFontSize(-0.05)" title="Decrease font size">A-</button>
+        <button class="ctrl-btn" onclick="changeFontSize(0.05)" title="Increase font size">A+</button>
+        <button class="ctrl-btn" onclick="copySummaryText()" title="Copy entire text">📋 Copy</button>
+        <a href="the-murder-artist.md" class="ctrl-btn" target="_blank" title="View raw markdown">📝 Raw .md</a>
+      </div>
+    </div>
+
+    <article class="content-article" style="background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; box-shadow: var(--card-shadow);">
+<h1 class="novel-title-main">The Murder Artist — Comprehensive Novel Summary & Critical Analysis</h1>
+<p><strong>Author:</strong> John Case (Jim & Carolyn Hougan) | <strong>Genre:</strong> Crime Fiction / Psychological Thriller | <strong>Language:</strong> English (Published: 2004)</p>
+<hr class="divider">
+<h3 class="novel-section-heading">1. Bibliographic Metadata & Overview</h3>
+<ul class="summary-list">
+  <li class="summary-item"><strong>Title:</strong> The Murder Artist</li>
+  <li class="summary-item"><strong>Authors:</strong> John Case (joint pseudonym of investigative journalists Jim Hougan and Carolyn Hougan)</li>
+  <li class="summary-item"><strong>Publication Date:</strong> 2004 (Ballantine Books / Random House)</li>
+  <li class="summary-item"><strong>Protagonist:</strong> Alex Callahan — Veteran television correspondent for a major news network</li>
+  <li class="summary-item"><strong>Core Subject:</strong> Parental devotion, psychological trauma, stage illusion, and serial abduction</li>
+  <li class="summary-item"><strong>Geographic Settings:</strong> Annapolis (Maryland), Crownsville, Washington D.C., New Orleans bayous (Louisiana), San Francisco Bay Area</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">2. Dramatis Personae</h3>
+<ul class="summary-list">
+  <li class="summary-item"><strong>Alex Callahan:</strong> A hardened investigative foreign correspondent accustomed to witnessing global bloodshed without breaking down.</li>
+  <li class="summary-item"><strong>Sean & Kevin Callahan:</strong> Alex’s cherished six-year-old twin sons whose sudden disappearance shatters his detached existence.</li>
+  <li class="summary-item"><strong>Liz Callahan:</strong> Alex’s estranged ex-wife, engaged in a bitter custody dispute while grappling with guilt and panic.</li>
+  <li class="summary-item"><strong>"The Piper" / "The Murder Artist":</strong> An elusive, psychopathic criminal mastermind with deep roots in professional stage illusion.</li>
+  <li class="summary-item"><strong>Detective Frank Varga:</strong> Annapolis homicide investigator initially heading the missing persons case, hampered by protocol.</li>
+  <li class="summary-item"><strong>Agent Marcus Torres:</strong> FBI lead investigator on the child abduction task force who erroneously focuses on Alex as a suspect.</li>
+  <li class="summary-item"><strong>Papa Joe / Mambo Marie:</strong> Louisiana bayou voodoo practitioners holding crucial esoteric keys to the killer’s occult rituals.</li>
+  <li class="summary-item"><strong>Harry Ross:</strong> Alex’s loyal network television producer who risks his career to provide clandestine newsroom research tools.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">3. Narrative Inciting Incident: The Maryland Renaissance Festival</h3>
+<ul class="summary-list">
+  <li class="summary-item">Alex Callahan picks up Kevin and Sean for his scheduled custody weekend, hoping to rebuild their familial bond.</li>
+  <li class="summary-item">To celebrate their time together, Alex takes the twin boys to the bustling Maryland Renaissance Festival in Crownsville.</li>
+  <li class="summary-item">Surrounded by costumed minstrels, jousting tournaments, and dense crowds, the boys marvel at the festive pageantry.</li>
+  <li class="summary-item">Alex turns his back for mere seconds to purchase cold drinks amidst the pressing, noisy festival crowd.</li>
+  <li class="summary-item">When he turns around, both boys have completely vanished into thin air without a sound, struggle, or alert.</li>
+  <li class="summary-item">Panicked search parties and festival security immediately seal the exits, but find no trace of the missing children.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">4. The Crime Scene & Cryptic Calling Cards</h3>
+<ul class="summary-list">
+  <li class="summary-item">Despondent and desperate, Alex returns to his home in Annapolis to await incoming ransom demands or phone calls.</li>
+  <li class="summary-item">Inside the quiet house, Alex discovers unmistakable signs of a deliberate, terrifyingly calculated trespass.</li>
+  <li class="summary-item">Resting upon a table is a small clear glass bowl filled to the brim with undisturbed, pristine water.</li>
+  <li class="summary-item">Next to the bowl sits a meticulously crafted origami figure of a rabbit, folded with surgical, artistic precision.</li>
+  <li class="summary-item">Arranged in two perfectly parallel rows are antique silver Mercury dimes, positioned side by side like miniature tombstones.</li>
+  <li class="summary-item">A discarded child’s undershirt bearing fresh droplets of blood confirms that the perpetrator has penetrated his inner sanctum.</li>
+  <li class="summary-item">Local police and federal agents inspect the residence but dismiss the artifacts as bizarre or staged by Alex himself.</li>
+  <li class="summary-item">Recognizing law enforcement’s fatal skepticism and bureaucratic delays, Alex realizes he must hunt the kidnapper alone.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">5. Uncovering the Serial Twin Abduction Pattern</h3>
+<ul class="summary-list">
+  <li class="summary-item">Drawing upon his seasoned investigative reporting background, Alex begins scouring national missing child databases.</li>
+  <li class="summary-item">With help from producer Harry Ross, Alex accesses unredacted police wires, crime morgue photos, and regional archives.</li>
+  <li class="summary-item">A horrifying nationwide pattern emerges: every few years, sets of identical or fraternal twin boys have disappeared.</li>
+  <li class="summary-item">In past cold cases across Virginia, Illinois, and Pennsylvania, investigators discovered identical origami animals and silver dimes.</li>
+  <li class="summary-item">Previous twin victims were ultimately found drowned or sacrificed in ritualistic, tableau-like arrangements months after abduction.</li>
+  <li class="summary-item">Alex discovers that forensic profilers privately refer to this phantom killer as "The Piper" due to his luring of innocent youth.</li>
+  <li class="summary-item">Alex calculates a terrifying timeline: the Piper keeps his captive twins alive for several weeks before completing his ritual.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">6. Journey into the Occult Underworld of Louisiana</h3>
+<ul class="summary-list">
+  <li class="summary-item">Following an antique coin dealer lead connected to the Mercury dimes, Alex traces the collector trail down to New Orleans.</li>
+  <li class="summary-item">In the French Quarter, esoteric historians and antique traders point Alex toward syncretic Afro-Caribbean religious rites.</li>
+  <li class="summary-item">Alex journeys deep into the misty, isolated swamplands of the Louisiana bayou to consult with revered voodoo practitioner Papa Joe.</li>
+  <li class="summary-item">To earn the practitioner’s sacred trust and decipher the symbolic ritual, Alex is forced to undergo an agonizing ordeal.</li>
+  <li class="summary-item">Alex is bound, placed into an unadorned wooden coffin, and buried alive in the swamp muck in a mock ritual of death and rebirth.</li>
+  <li class="summary-item">Emerging from the claustrophobic nightmare, Alex learns that the Piper views twins as metaphysical mirrors of a unified soul.</li>
+  <li class="summary-item">In the killer’s twisted cosmology, extinguishing both lives simultaneously captures the spiritual essence of divine perfection.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">7. The Climax: California Sanctuary & The Illusionist Exposed</h3>
+<ul class="summary-list">
+  <li class="summary-item">Alex connects the intricate stagecraft, secret compartments, and origami techniques to a reclusive former professional illusionist.</li>
+  <li class="summary-item">The hunt leads him across the continent to an isolated, architecturally complex estate nestled in coastal Northern California.</li>
+  <li class="summary-item">Alex infiltrates the fortress-like sanctuary, discovering a surreal maze of optical illusions, hidden passages, and soundproof chambers.</li>
+  <li class="summary-item">He discovers Kevin and Sean imprisoned in custom acrylic glass enclosures, terrified but still alive and physically unharmed.</li>
+  <li class="summary-item">The Piper emerges, revealing his grandiose delusion of transforming physical murder into sublime, transcendent fine art.</li>
+  <li class="summary-item">A violent, desperate struggle erupts as Alex charges the killer, overcoming theatrical flash powder and concealed blade traps.</li>
+  <li class="summary-item">Alex leverages brutal hand-to-hand combat to incapacitate the Piper, smashing the holding cells to retrieve his weeping sons.</li>
+  <li class="summary-item">Police and emergency medical teams arrive at the compound following distress transmissions sent by Alex’s network contacts.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">8. The Aftermath & Lingering Shadows</h3>
+<ul class="summary-list">
+  <li class="summary-item">The twin boys are rushed to emergency pediatric care, suffering from acute dehydration and shock but free of physical mutilation.</li>
+  <li class="summary-item">Alex and Liz reunite at the hospital bedside, their past marital rancor dissolved in shared gratitude and tearful relief.</li>
+  <li class="summary-item">Forensic sweeps of the California compound reveal remnants of past unsolved crimes, providing closure to grieving families nationwide.</li>
+  <li class="summary-item">Despite the successful rescue, Alex is left haunted by the razor-thin margin between survival and utter destruction.</li>
+</ul>
+<hr class="divider">
+<h3 class="novel-section-heading">9. Thematic Analysis & Critical Legacy</h3>
+<ul class="summary-list">
+  <li class="summary-item"><strong>Paternal Resolve:</strong> Portrays fatherhood not as a passive condition, but as an unrelenting, instinctual survival force.</li>
+  <li class="summary-item"><strong>Vulnerability of Modern Childhood:</strong> Highlights how quickly predatory malice can pierce the mundane facade of suburban safety.</li>
+  <li class="summary-item"><strong>The Aestheticization of Evil:</strong> Explores the macabre psychosis of viewing human life as raw material for theatrical performance.</li>
+  <li class="summary-item"><strong>Critique of Bureaucracy:</strong> Demonstrates how institutional inertia and procedural rigidity frequently fail victims in acute crises.</li>
+  <li class="summary-item"><strong>Literary Craft:</strong> Combines intricate investigative journalism tropes with noir atmosphere and breakneck cinematic pacing.</li>
+  <li class="summary-item"><strong>Authorial Rigor:</strong> Jim and Carolyn Hougan weave genuine journalistic authenticity into every forensic and occult deduction.</li>
+  <li class="summary-item">John Case delivers a pulse-pounding masterpiece blending forensic procedurals, psychological horror, and occult mythology.</li>
+</ul>
+    </article>
+
+    <div class="pagination-bar">
+      <span></span>
+      <a href="index.html" class="ctrl-btn">📚 All Novels</a>
+      <a href="the-adventures-of-tom-sawyer.html" class="ctrl-btn">The Adventures of Tom Sawyer →</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Novels Summary Archive</strong> &bull; Version <span class="version-pill" style="font-size: 0.7rem; padding: 0.1rem 0.45rem;">v1.2.0</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Index</a> &bull;
+        <a href="the-murder-artist.md">Markdown Source</a> &bull;
+        <a href="https://github.com/govindarajanv/novels" target="_blank" rel="noopener noreferrer">Source Code</a>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+  function initTheme() {
+    const saved = localStorage.getItem('novel_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeBtn(saved);
+  }
+
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('novel_theme', next);
+    updateThemeBtn(next);
+  }
+
+  function updateThemeBtn(theme) {
+    const btns = document.querySelectorAll('.theme-toggle-btn');
+    btns.forEach(btn => {
+      btn.innerHTML = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    });
+  }
+
+  let currentFontSize = 1.02;
+  function changeFontSize(delta) {
+    currentFontSize = Math.max(0.85, Math.min(1.4, currentFontSize + delta));
+    document.documentElement.style.setProperty('--article-font-size', currentFontSize + 'rem');
+  }
+
+  function copySummaryText() {
+    const article = document.querySelector('.content-article');
+    if (!article) return;
+    navigator.clipboard.writeText(article.innerText).then(() => {
+      showToast('Summary copied to clipboard!');
+    });
+  }
+
+  function showToast(msg) {
+    let toast = document.getElementById('app-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'app-toast';
+      toast.className = 'toast';
+      document.body.appendChild(toast);
+    }
+    toast.innerText = msg;
+    toast.style.display = 'block';
+    setTimeout(() => { toast.style.display = 'none'; }, 2400);
+  }
+
+  document.addEventListener('DOMContentLoaded', initTheme);
+</script>
+
+</body>
+</html>
