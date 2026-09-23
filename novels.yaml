@@ -11,3 +11,87 @@ novels:
     author: Mark Twain
     language: English
     genre: bildungsroman
+  - name: 'The King of Torts'
+    author: John Grisham
+    language: English
+    genre: legal thriller
+
+  - name: 'A Week in Winter'
+    author: Marcia Willett
+    language: English
+    genre: fiction
+
+  - name: 'The Last Detective'
+    author: Robert Crais
+    language: English
+    genre: crime
+
+  - name: 'Eat Cake'
+    author: Jeanne Ray
+    language: English
+    genre: contemporary fiction
+
+  - name: 'The Last Juror'
+    author: John Grisham
+    language: English
+    genre: legal thriller
+
+  - name: 'The Various Haunts of Men'
+    author: Susan Hill
+    language: English
+    genre: crime
+
+  - name: 'The Codex'
+    author: Douglas Preston
+    language: English
+    genre: thriller
+
+  - name: 'The Curious Incident of the Dog in the Night-Time'
+    author: Mark Haddon
+    language: English
+    genre: mystery
+
+  - name: 'Start from Here'
+    author: Sean French
+    language: English
+    genre: contemporary fiction
+
+  - name: 'At Risk'
+    author: Stella Rimington
+    language: English
+    genre: thriller
+
+  - name: "The No.1 Ladies' Detective Agency"
+    author: Alexander McCall Smith
+    language: English
+    genre: crime
+
+  - name: 'The Da Vinci Code'
+    author: Dan Brown
+    language: English
+    genre: mystery
+
+  - name: 'Up and Down in the Dales'
+    author: Gervase Phinn
+    language: English
+    genre: memoir
+
+  - name: 'The Return of the Dancing Master'
+    author: Henning Mankell
+    language: English
+    genre: crime
+
+  - name: 'A Gathering Light'
+    author: Jennifer Donnelly
+    language: English
+    genre: historical fiction
+
+  - name: 'Harry Potter and the Chamber of Secrets'
+    author: J.K. Rowling
+    language: English
+    genre: fantasy
+
+  - name: 'Harry Potter and the Prisoner of Azkaban'
+    author: J.K. Rowling
+    language: English
+    genre: fantasy
