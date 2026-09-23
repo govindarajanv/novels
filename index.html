@@ -286,6 +286,10 @@
       background: var(--surface-hover);
       color: var(--text-muted);
       border: 1px solid var(--border);
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
     }
 
     .badge-primary {
@@ -298,6 +302,7 @@
       background: var(--success-glow);
       color: var(--success);
       border-color: var(--success);
+      white-space: nowrap;
     }
 
     .novel-card-title {
@@ -542,21 +547,28 @@
       border: 1px solid var(--border);
     }
 
-    /* Table */
+    /* Table & Repository Index */
     .table-responsive {
       overflow-x: auto;
-      margin: 1.5rem 0;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.75rem 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface-card);
+      box-shadow: var(--card-shadow);
     }
 
     table {
       width: 100%;
+      min-width: 760px;
       border-collapse: collapse;
       font-size: 0.92rem;
     }
 
     th, td {
       border: 1px solid var(--border);
-      padding: 0.8rem 1rem;
+      padding: 0.85rem 1.1rem;
+      vertical-align: middle;
       text-align: left;
     }
 
@@ -564,10 +576,58 @@
       background: var(--surface);
       color: var(--primary);
       font-weight: 700;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     tr:nth-child(even) {
       background: var(--surface);
+    }
+
+    tbody tr {
+      transition: background-color 0.15s ease;
+    }
+
+    tbody tr:hover {
+      background: var(--surface-hover);
+    }
+
+    /* Column-specific alignment and sizing */
+    .col-novel, th.col-novel, td.col-novel {
+      text-align: left;
+      min-width: 190px;
+    }
+
+    .col-author, th.col-author, td.col-author {
+      text-align: left;
+      min-width: 140px;
+      color: var(--text-muted);
+    }
+
+    .col-genre, th.col-genre, td.col-genre {
+      text-align: center;
+      white-space: nowrap;
+      width: 125px;
+    }
+
+    .col-lang, th.col-lang, td.col-lang {
+      text-align: center;
+      white-space: nowrap;
+      width: 100px;
+      color: var(--text-muted);
+    }
+
+    .col-links, th.col-links, td.col-links {
+      text-align: center;
+      white-space: nowrap;
+      min-width: 170px;
+    }
+
+    .col-verification, th.col-verification, td.col-verification {
+      text-align: center;
+      white-space: nowrap;
+      width: 135px;
     }
 
     /* Standalone Novel Page Bar */
@@ -668,7 +728,7 @@
         <span>Novels Summary Archive</span>
       </a>
       <div class="nav-links">
-        <span class="version-pill">v1.3.0</span>
+        <span class="version-pill">v1.3.1</span>
         <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle theme">☀️ Light</button>
         <a href="#reader" class="nav-link">Reader</a>
         <a href="#catalog-table" class="nav-link">Catalog</a>
@@ -684,7 +744,7 @@
     <header class="site-hero">
       <h1 class="site-title">Novels Summary Archive</h1>
       <div class="site-version-row">
-        <span class="version-pill">v1.3.0</span>
+        <span class="version-pill">v1.3.1</span>
         <span style="color: var(--text-muted); font-size: 0.9rem;">Comprehensive 100-Line Literary Analyses</span>
       </div>
       <p class="site-tagline">
@@ -1290,35 +1350,35 @@
         <table>
           <thead>
             <tr>
-              <th>Novel Name</th>
-              <th>Author</th>
-              <th>Genre</th>
-              <th>Language</th>
-              <th>Reading Links</th>
-              <th>Verification</th>
+              <th class="col-novel">Novel Name</th>
+              <th class="col-author">Author</th>
+              <th class="col-genre">Genre</th>
+              <th class="col-lang">Language</th>
+              <th class="col-links">Reading Links</th>
+              <th class="col-verification">Verification</th>
             </tr>
           </thead>
           <tbody>
-<tr><td><strong>The Murder Artist</strong></td><td>John Case</td><td><span class="badge badge-primary">Crime</span></td><td>English</td><td><a href="the-murder-artist.html"><strong>Read HTML</strong></a> &bull; <a href="the-murder-artist.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The Adventures of Tom Sawyer</strong></td><td>Mark Twain</td><td><span class="badge badge-primary">bildungsroman</span></td><td>English</td><td><a href="the-adventures-of-tom-sawyer.html"><strong>Read HTML</strong></a> &bull; <a href="the-adventures-of-tom-sawyer.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>Adventures of Huckleberry Finn</strong></td><td>Mark Twain</td><td><span class="badge badge-primary">bildungsroman</span></td><td>English</td><td><a href="adventures-of-huckleberry-finn.html"><strong>Read HTML</strong></a> &bull; <a href="adventures-of-huckleberry-finn.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The King of Torts</strong></td><td>John Grisham</td><td><span class="badge badge-primary">legal thriller</span></td><td>English</td><td><a href="the-king-of-torts.html"><strong>Read HTML</strong></a> &bull; <a href="the-king-of-torts.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>A Week in Winter</strong></td><td>Marcia Willett</td><td><span class="badge badge-primary">fiction</span></td><td>English</td><td><a href="a-week-in-winter.html"><strong>Read HTML</strong></a> &bull; <a href="a-week-in-winter.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The Last Detective</strong></td><td>Robert Crais</td><td><span class="badge badge-primary">crime</span></td><td>English</td><td><a href="the-last-detective.html"><strong>Read HTML</strong></a> &bull; <a href="the-last-detective.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>Eat Cake</strong></td><td>Jeanne Ray</td><td><span class="badge badge-primary">contemporary fiction</span></td><td>English</td><td><a href="eat-cake.html"><strong>Read HTML</strong></a> &bull; <a href="eat-cake.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The Last Juror</strong></td><td>John Grisham</td><td><span class="badge badge-primary">legal thriller</span></td><td>English</td><td><a href="the-last-juror.html"><strong>Read HTML</strong></a> &bull; <a href="the-last-juror.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The Various Haunts of Men</strong></td><td>Susan Hill</td><td><span class="badge badge-primary">crime</span></td><td>English</td><td><a href="the-various-haunts-of-men.html"><strong>Read HTML</strong></a> &bull; <a href="the-various-haunts-of-men.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The Codex</strong></td><td>Douglas Preston</td><td><span class="badge badge-primary">thriller</span></td><td>English</td><td><a href="the-codex.html"><strong>Read HTML</strong></a> &bull; <a href="the-codex.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The Curious Incident of the Dog in the Night-Time</strong></td><td>Mark Haddon</td><td><span class="badge badge-primary">mystery</span></td><td>English</td><td><a href="the-curious-incident-of-the-dog-in-the-night-time.html"><strong>Read HTML</strong></a> &bull; <a href="the-curious-incident-of-the-dog-in-the-night-time.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>Start from Here</strong></td><td>Sean French</td><td><span class="badge badge-primary">contemporary fiction</span></td><td>English</td><td><a href="start-from-here.html"><strong>Read HTML</strong></a> &bull; <a href="start-from-here.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>At Risk</strong></td><td>Stella Rimington</td><td><span class="badge badge-primary">thriller</span></td><td>English</td><td><a href="at-risk.html"><strong>Read HTML</strong></a> &bull; <a href="at-risk.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The No.1 Ladies' Detective Agency</strong></td><td>Alexander McCall Smith</td><td><span class="badge badge-primary">crime</span></td><td>English</td><td><a href="the-no-1-ladies-detective-agency.html"><strong>Read HTML</strong></a> &bull; <a href="the-no-1-ladies-detective-agency.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The Da Vinci Code</strong></td><td>Dan Brown</td><td><span class="badge badge-primary">mystery</span></td><td>English</td><td><a href="the-da-vinci-code.html"><strong>Read HTML</strong></a> &bull; <a href="the-da-vinci-code.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>Up and Down in the Dales</strong></td><td>Gervase Phinn</td><td><span class="badge badge-primary">memoir</span></td><td>English</td><td><a href="up-and-down-in-the-dales.html"><strong>Read HTML</strong></a> &bull; <a href="up-and-down-in-the-dales.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>The Return of the Dancing Master</strong></td><td>Henning Mankell</td><td><span class="badge badge-primary">crime</span></td><td>English</td><td><a href="the-return-of-the-dancing-master.html"><strong>Read HTML</strong></a> &bull; <a href="the-return-of-the-dancing-master.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>A Gathering Light</strong></td><td>Jennifer Donnelly</td><td><span class="badge badge-primary">historical fiction</span></td><td>English</td><td><a href="a-gathering-light.html"><strong>Read HTML</strong></a> &bull; <a href="a-gathering-light.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>Harry Potter and the Chamber of Secrets</strong></td><td>J.K. Rowling</td><td><span class="badge badge-primary">fantasy</span></td><td>English</td><td><a href="harry-potter-and-the-chamber-of-secrets.html"><strong>Read HTML</strong></a> &bull; <a href="harry-potter-and-the-chamber-of-secrets.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
-<tr><td><strong>Harry Potter and the Prisoner of Azkaban</strong></td><td>J.K. Rowling</td><td><span class="badge badge-primary">fantasy</span></td><td>English</td><td><a href="harry-potter-and-the-prisoner-of-azkaban.html"><strong>Read HTML</strong></a> &bull; <a href="harry-potter-and-the-prisoner-of-azkaban.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The Murder Artist</strong></td><td class="col-author">John Case</td><td class="col-genre"><span class="badge badge-primary">Crime</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-murder-artist.html"><strong>Read HTML</strong></a> &bull; <a href="the-murder-artist.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The Adventures of Tom Sawyer</strong></td><td class="col-author">Mark Twain</td><td class="col-genre"><span class="badge badge-primary">Bildungsroman</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-adventures-of-tom-sawyer.html"><strong>Read HTML</strong></a> &bull; <a href="the-adventures-of-tom-sawyer.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>Adventures of Huckleberry Finn</strong></td><td class="col-author">Mark Twain</td><td class="col-genre"><span class="badge badge-primary">Bildungsroman</span></td><td class="col-lang">English</td><td class="col-links"><a href="adventures-of-huckleberry-finn.html"><strong>Read HTML</strong></a> &bull; <a href="adventures-of-huckleberry-finn.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The King of Torts</strong></td><td class="col-author">John Grisham</td><td class="col-genre"><span class="badge badge-primary">Legal Thriller</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-king-of-torts.html"><strong>Read HTML</strong></a> &bull; <a href="the-king-of-torts.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>A Week in Winter</strong></td><td class="col-author">Marcia Willett</td><td class="col-genre"><span class="badge badge-primary">Fiction</span></td><td class="col-lang">English</td><td class="col-links"><a href="a-week-in-winter.html"><strong>Read HTML</strong></a> &bull; <a href="a-week-in-winter.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The Last Detective</strong></td><td class="col-author">Robert Crais</td><td class="col-genre"><span class="badge badge-primary">Crime</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-last-detective.html"><strong>Read HTML</strong></a> &bull; <a href="the-last-detective.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>Eat Cake</strong></td><td class="col-author">Jeanne Ray</td><td class="col-genre"><span class="badge badge-primary">Contemporary Fiction</span></td><td class="col-lang">English</td><td class="col-links"><a href="eat-cake.html"><strong>Read HTML</strong></a> &bull; <a href="eat-cake.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The Last Juror</strong></td><td class="col-author">John Grisham</td><td class="col-genre"><span class="badge badge-primary">Legal Thriller</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-last-juror.html"><strong>Read HTML</strong></a> &bull; <a href="the-last-juror.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The Various Haunts of Men</strong></td><td class="col-author">Susan Hill</td><td class="col-genre"><span class="badge badge-primary">Crime</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-various-haunts-of-men.html"><strong>Read HTML</strong></a> &bull; <a href="the-various-haunts-of-men.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The Codex</strong></td><td class="col-author">Douglas Preston</td><td class="col-genre"><span class="badge badge-primary">Thriller</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-codex.html"><strong>Read HTML</strong></a> &bull; <a href="the-codex.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The Curious Incident of the Dog in the Night-Time</strong></td><td class="col-author">Mark Haddon</td><td class="col-genre"><span class="badge badge-primary">Mystery</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-curious-incident-of-the-dog-in-the-night-time.html"><strong>Read HTML</strong></a> &bull; <a href="the-curious-incident-of-the-dog-in-the-night-time.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>Start from Here</strong></td><td class="col-author">Sean French</td><td class="col-genre"><span class="badge badge-primary">Contemporary Fiction</span></td><td class="col-lang">English</td><td class="col-links"><a href="start-from-here.html"><strong>Read HTML</strong></a> &bull; <a href="start-from-here.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>At Risk</strong></td><td class="col-author">Stella Rimington</td><td class="col-genre"><span class="badge badge-primary">Thriller</span></td><td class="col-lang">English</td><td class="col-links"><a href="at-risk.html"><strong>Read HTML</strong></a> &bull; <a href="at-risk.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The No.1 Ladies' Detective Agency</strong></td><td class="col-author">Alexander McCall Smith</td><td class="col-genre"><span class="badge badge-primary">Crime</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-no-1-ladies-detective-agency.html"><strong>Read HTML</strong></a> &bull; <a href="the-no-1-ladies-detective-agency.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The Da Vinci Code</strong></td><td class="col-author">Dan Brown</td><td class="col-genre"><span class="badge badge-primary">Mystery</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-da-vinci-code.html"><strong>Read HTML</strong></a> &bull; <a href="the-da-vinci-code.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>Up and Down in the Dales</strong></td><td class="col-author">Gervase Phinn</td><td class="col-genre"><span class="badge badge-primary">Memoir</span></td><td class="col-lang">English</td><td class="col-links"><a href="up-and-down-in-the-dales.html"><strong>Read HTML</strong></a> &bull; <a href="up-and-down-in-the-dales.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>The Return of the Dancing Master</strong></td><td class="col-author">Henning Mankell</td><td class="col-genre"><span class="badge badge-primary">Crime</span></td><td class="col-lang">English</td><td class="col-links"><a href="the-return-of-the-dancing-master.html"><strong>Read HTML</strong></a> &bull; <a href="the-return-of-the-dancing-master.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>A Gathering Light</strong></td><td class="col-author">Jennifer Donnelly</td><td class="col-genre"><span class="badge badge-primary">Historical Fiction</span></td><td class="col-lang">English</td><td class="col-links"><a href="a-gathering-light.html"><strong>Read HTML</strong></a> &bull; <a href="a-gathering-light.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>Harry Potter and the Chamber of Secrets</strong></td><td class="col-author">J.K. Rowling</td><td class="col-genre"><span class="badge badge-primary">Fantasy</span></td><td class="col-lang">English</td><td class="col-links"><a href="harry-potter-and-the-chamber-of-secrets.html"><strong>Read HTML</strong></a> &bull; <a href="harry-potter-and-the-chamber-of-secrets.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
+<tr><td class="col-novel"><strong>Harry Potter and the Prisoner of Azkaban</strong></td><td class="col-author">J.K. Rowling</td><td class="col-genre"><span class="badge badge-primary">Fantasy</span></td><td class="col-lang">English</td><td class="col-links"><a href="harry-potter-and-the-prisoner-of-azkaban.html"><strong>Read HTML</strong></a> &bull; <a href="harry-potter-and-the-prisoner-of-azkaban.md">Markdown</a></td><td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1330,7 +1390,7 @@
   <footer>
     <div class="footer-inner">
       <div>
-        <strong>Novels Summary Archive</strong> &bull; Version <span class="version-pill" style="font-size: 0.7rem; padding: 0.1rem 0.45rem;">v1.3.0</span>
+        <strong>Novels Summary Archive</strong> &bull; Version <span class="version-pill" style="font-size: 0.7rem; padding: 0.1rem 0.45rem;">v1.3.1</span>
       </div>
       <div class="footer-links">
         <a href="#reader">Interactive Reader</a> &bull;

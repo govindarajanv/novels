@@ -11,7 +11,7 @@ import html
 import json
 import yaml
 
-VERSION = "v1.3.0"
+VERSION = "v1.3.1"
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NOVELS_YAML_PATH = os.path.join(REPO_ROOT, "novels.yaml")
 INDEX_MD_PATH = os.path.join(REPO_ROOT, "index.md")
@@ -414,6 +414,10 @@ COMMON_CSS = """
       background: var(--surface-hover);
       color: var(--text-muted);
       border: 1px solid var(--border);
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
     }
 
     .badge-primary {
@@ -426,6 +430,7 @@ COMMON_CSS = """
       background: var(--success-glow);
       color: var(--success);
       border-color: var(--success);
+      white-space: nowrap;
     }
 
     .novel-card-title {
@@ -670,21 +675,28 @@ COMMON_CSS = """
       border: 1px solid var(--border);
     }
 
-    /* Table */
+    /* Table & Repository Index */
     .table-responsive {
       overflow-x: auto;
-      margin: 1.5rem 0;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.75rem 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface-card);
+      box-shadow: var(--card-shadow);
     }
 
     table {
       width: 100%;
+      min-width: 760px;
       border-collapse: collapse;
       font-size: 0.92rem;
     }
 
     th, td {
       border: 1px solid var(--border);
-      padding: 0.8rem 1rem;
+      padding: 0.85rem 1.1rem;
+      vertical-align: middle;
       text-align: left;
     }
 
@@ -692,10 +704,58 @@ COMMON_CSS = """
       background: var(--surface);
       color: var(--primary);
       font-weight: 700;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     tr:nth-child(even) {
       background: var(--surface);
+    }
+
+    tbody tr {
+      transition: background-color 0.15s ease;
+    }
+
+    tbody tr:hover {
+      background: var(--surface-hover);
+    }
+
+    /* Column-specific alignment and sizing */
+    .col-novel, th.col-novel, td.col-novel {
+      text-align: left;
+      min-width: 190px;
+    }
+
+    .col-author, th.col-author, td.col-author {
+      text-align: left;
+      min-width: 140px;
+      color: var(--text-muted);
+    }
+
+    .col-genre, th.col-genre, td.col-genre {
+      text-align: center;
+      white-space: nowrap;
+      width: 125px;
+    }
+
+    .col-lang, th.col-lang, td.col-lang {
+      text-align: center;
+      white-space: nowrap;
+      width: 100px;
+      color: var(--text-muted);
+    }
+
+    .col-links, th.col-links, td.col-links {
+      text-align: center;
+      white-space: nowrap;
+      min-width: 170px;
+    }
+
+    .col-verification, th.col-verification, td.col-verification {
+      text-align: center;
+      white-space: nowrap;
+      width: 135px;
     }
 
     /* Standalone Novel Page Bar */
@@ -1050,12 +1110,12 @@ __FIRST_HTML__
         <table>
           <thead>
             <tr>
-              <th>Novel Name</th>
-              <th>Author</th>
-              <th>Genre</th>
-              <th>Language</th>
-              <th>Reading Links</th>
-              <th>Verification</th>
+              <th class="col-novel">Novel Name</th>
+              <th class="col-author">Author</th>
+              <th class="col-genre">Genre</th>
+              <th class="col-lang">Language</th>
+              <th class="col-links">Reading Links</th>
+              <th class="col-verification">Verification</th>
             </tr>
           </thead>
           <tbody>
@@ -1191,8 +1251,16 @@ def generate_index_html(novels, novel_rendered_dict: dict) -> str:
         genre = novel.get("genre", "Fiction")
         language = novel.get("language", "English")
         slug = slugify(name)
+        genre_display = genre.title()
         table_rows.append(
-            f'<tr><td><strong>{name}</strong></td><td>{author}</td><td><span class="badge badge-primary">{genre}</span></td><td>{language}</td><td><a href="{slug}.html"><strong>Read HTML</strong></a> &bull; <a href="{slug}.md">Markdown</a></td><td><span class="badge badge-success">✓ 100 Lines</span></td></tr>'
+            f'<tr>'
+            f'<td class="col-novel"><strong>{name}</strong></td>'
+            f'<td class="col-author">{author}</td>'
+            f'<td class="col-genre"><span class="badge badge-primary">{genre_display}</span></td>'
+            f'<td class="col-lang">{language}</td>'
+            f'<td class="col-links"><a href="{slug}.html"><strong>Read HTML</strong></a> &bull; <a href="{slug}.md">Markdown</a></td>'
+            f'<td class="col-verification"><span class="badge badge-success">✓ 100 Lines</span></td>'
+            f'</tr>'
         )
 
     first_novel = novels[0]
@@ -1258,9 +1326,9 @@ def generate_index_md(novels) -> str:
         card_html = f'''  <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">{genre}</span>
+        <span class="badge badge-primary">{genre.title()}</span>
         <span class="badge">{language}</span>
-        <span class="badge">{status_pill}</span>
+        <span class="badge badge-success">{status_pill}</span>
       </div>
       <h2 class="novel-card-title">{name}</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> {author}</p>
@@ -1280,8 +1348,10 @@ def generate_index_md(novels) -> str:
         "",
         "## 📋 Repository Index & Overview",
         "",
-        "| Novel Name | Author | Genre | Language | Summary Link | Verification |",
-        "| :--- | :--- | :--- | :--- | :--- | :--- |",
+        '<div class="table-responsive" markdown="1">',
+        "",
+        "| Novel Name | Author | Genre | Language | Reading Links | Verification |",
+        "| :--- | :--- | :---: | :---: | :---: | :---: |",
     ])
 
     for novel in novels:
@@ -1293,10 +1363,16 @@ def generate_index_md(novels) -> str:
         filename = f"{slug}.md"
         filepath = os.path.join(REPO_ROOT, filename)
         exists = os.path.exists(filepath)
-        lines_verified = f"{count_lines(filepath)} lines" if exists else "Missing"
-        lines.append(f"| **{name}** | {author} | {genre} | {language} | [{name}]({slug}.html) &bull; [Markdown]({filename}) | `{lines_verified}` |")
+        if exists:
+            lines_verified = f'<span class="badge badge-success">✓ {count_lines(filepath)} Lines</span>'
+        else:
+            lines_verified = '<span class="badge">Missing</span>'
+        genre_badge = f'<span class="badge badge-primary">{genre.title()}</span>'
+        lines.append(f"| **{name}** | {author} | {genre_badge} | {language} | [Read HTML]({slug}.html) &bull; [Markdown]({filename}) | {lines_verified} |")
 
     lines.extend([
+        "",
+        "</div>",
         "",
         "---",
         "",

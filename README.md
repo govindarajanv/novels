@@ -1,10 +1,10 @@
 # Novels Summary Archive
 
-[![Version](https://img.shields.io/badge/version-v1.3.0-blue.svg)](https://github.com/govindarajanv/novels)
+[![Version](https://img.shields.io/badge/version-v1.3.1-blue.svg)](https://github.com/govindarajanv/novels)
 [![Pages](https://img.shields.io/badge/GitHub%20Pages-live-success.svg)](https://govindarajanv.github.io/novels/)
 [![Status](https://img.shields.io/badge/summaries-100--line%20verified-brightgreen.svg)](index.html)
 
-**Current Version:** `v1.3.0`  
+**Current Version:** `v1.3.1`  
 **Live Site:** [https://govindarajanv.github.io/novels/](https://govindarajanv.github.io/novels/)
 
 ---
@@ -23,7 +23,7 @@ The **Novels Summary Archive** is a curated digital library of comprehensive, ri
 ## 📚 Current Catalog (20 Novels)
 
 | Novel Title | Author | Genre | Language | Summary (HTML) | Summary (Markdown) | Verification |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | **The Murder Artist** | John Case | Crime | English | [Read HTML](the-murder-artist.html) | [the-murder-artist.md](the-murder-artist.md) | `✓ 100 Lines` |
 | **The Adventures of Tom Sawyer** | Mark Twain | Bildungsroman | English | [Read HTML](the-adventures-of-tom-sawyer.html) | [the-adventures-of-tom-sawyer.md](the-adventures-of-tom-sawyer.md) | `✓ 100 Lines` |
 | **Adventures of Huckleberry Finn** | Mark Twain | Bildungsroman | English | [Read HTML](adventures-of-huckleberry-finn.html) | [adventures-of-huckleberry-finn.md](adventures-of-huckleberry-finn.md) | `✓ 100 Lines` |

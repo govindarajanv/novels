@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Novels Summary Archive
-version: v1.3.0
+version: v1.3.1
 ---
 
 <div class="site-hero">
   <h1 class="site-title">Novels Summary Archive</h1>
   <div class="site-version-row">
-    <span class="version-pill">v1.3.0</span>
+    <span class="version-pill">v1.3.1</span>
     <span style="color: var(--text-muted); font-size: 0.85rem;">Comprehensive 100-Line Literary Analyses</span>
   </div>
   <p class="site-tagline">
@@ -23,7 +23,7 @@ version: v1.3.0
       <div class="novel-card-meta">
         <span class="badge badge-primary">Crime</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The Murder Artist</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> John Case</p>
@@ -37,9 +37,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">bildungsroman</span>
+        <span class="badge badge-primary">Bildungsroman</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The Adventures of Tom Sawyer</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Mark Twain</p>
@@ -53,9 +53,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">bildungsroman</span>
+        <span class="badge badge-primary">Bildungsroman</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">Adventures of Huckleberry Finn</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Mark Twain</p>
@@ -69,9 +69,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">legal thriller</span>
+        <span class="badge badge-primary">Legal Thriller</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The King of Torts</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> John Grisham</p>
@@ -85,9 +85,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">fiction</span>
+        <span class="badge badge-primary">Fiction</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">A Week in Winter</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Marcia Willett</p>
@@ -101,9 +101,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">crime</span>
+        <span class="badge badge-primary">Crime</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The Last Detective</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Robert Crais</p>
@@ -117,9 +117,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">contemporary fiction</span>
+        <span class="badge badge-primary">Contemporary Fiction</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">Eat Cake</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Jeanne Ray</p>
@@ -133,9 +133,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">legal thriller</span>
+        <span class="badge badge-primary">Legal Thriller</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The Last Juror</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> John Grisham</p>
@@ -149,9 +149,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">crime</span>
+        <span class="badge badge-primary">Crime</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The Various Haunts of Men</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Susan Hill</p>
@@ -165,9 +165,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">thriller</span>
+        <span class="badge badge-primary">Thriller</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The Codex</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Douglas Preston</p>
@@ -181,9 +181,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">mystery</span>
+        <span class="badge badge-primary">Mystery</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The Curious Incident of the Dog in the Night-Time</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Mark Haddon</p>
@@ -197,9 +197,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">contemporary fiction</span>
+        <span class="badge badge-primary">Contemporary Fiction</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">Start from Here</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Sean French</p>
@@ -213,9 +213,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">thriller</span>
+        <span class="badge badge-primary">Thriller</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">At Risk</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Stella Rimington</p>
@@ -229,9 +229,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">crime</span>
+        <span class="badge badge-primary">Crime</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The No.1 Ladies' Detective Agency</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Alexander McCall Smith</p>
@@ -245,9 +245,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">mystery</span>
+        <span class="badge badge-primary">Mystery</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The Da Vinci Code</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Dan Brown</p>
@@ -261,9 +261,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">memoir</span>
+        <span class="badge badge-primary">Memoir</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">Up and Down in the Dales</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Gervase Phinn</p>
@@ -277,9 +277,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">crime</span>
+        <span class="badge badge-primary">Crime</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">The Return of the Dancing Master</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Henning Mankell</p>
@@ -293,9 +293,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">historical fiction</span>
+        <span class="badge badge-primary">Historical Fiction</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">A Gathering Light</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> Jennifer Donnelly</p>
@@ -309,9 +309,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">fantasy</span>
+        <span class="badge badge-primary">Fantasy</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">Harry Potter and the Chamber of Secrets</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> J.K. Rowling</p>
@@ -325,9 +325,9 @@ version: v1.3.0
   <div class="novel-card">
     <div>
       <div class="novel-card-meta">
-        <span class="badge badge-primary">fantasy</span>
+        <span class="badge badge-primary">Fantasy</span>
         <span class="badge">English</span>
-        <span class="badge">✓ 100 Lines</span>
+        <span class="badge badge-success">✓ 100 Lines</span>
       </div>
       <h2 class="novel-card-title">Harry Potter and the Prisoner of Azkaban</h2>
       <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.75rem;"><strong>By:</strong> J.K. Rowling</p>
@@ -344,28 +344,32 @@ version: v1.3.0
 
 ## 📋 Repository Index & Overview
 
-| Novel Name | Author | Genre | Language | Summary Link | Verification |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **The Murder Artist** | John Case | Crime | English | [The Murder Artist](the-murder-artist.html) &bull; [Markdown](the-murder-artist.md) | `100 lines` |
-| **The Adventures of Tom Sawyer** | Mark Twain | bildungsroman | English | [The Adventures of Tom Sawyer](the-adventures-of-tom-sawyer.html) &bull; [Markdown](the-adventures-of-tom-sawyer.md) | `100 lines` |
-| **Adventures of Huckleberry Finn** | Mark Twain | bildungsroman | English | [Adventures of Huckleberry Finn](adventures-of-huckleberry-finn.html) &bull; [Markdown](adventures-of-huckleberry-finn.md) | `100 lines` |
-| **The King of Torts** | John Grisham | legal thriller | English | [The King of Torts](the-king-of-torts.html) &bull; [Markdown](the-king-of-torts.md) | `100 lines` |
-| **A Week in Winter** | Marcia Willett | fiction | English | [A Week in Winter](a-week-in-winter.html) &bull; [Markdown](a-week-in-winter.md) | `100 lines` |
-| **The Last Detective** | Robert Crais | crime | English | [The Last Detective](the-last-detective.html) &bull; [Markdown](the-last-detective.md) | `100 lines` |
-| **Eat Cake** | Jeanne Ray | contemporary fiction | English | [Eat Cake](eat-cake.html) &bull; [Markdown](eat-cake.md) | `100 lines` |
-| **The Last Juror** | John Grisham | legal thriller | English | [The Last Juror](the-last-juror.html) &bull; [Markdown](the-last-juror.md) | `100 lines` |
-| **The Various Haunts of Men** | Susan Hill | crime | English | [The Various Haunts of Men](the-various-haunts-of-men.html) &bull; [Markdown](the-various-haunts-of-men.md) | `100 lines` |
-| **The Codex** | Douglas Preston | thriller | English | [The Codex](the-codex.html) &bull; [Markdown](the-codex.md) | `100 lines` |
-| **The Curious Incident of the Dog in the Night-Time** | Mark Haddon | mystery | English | [The Curious Incident of the Dog in the Night-Time](the-curious-incident-of-the-dog-in-the-night-time.html) &bull; [Markdown](the-curious-incident-of-the-dog-in-the-night-time.md) | `100 lines` |
-| **Start from Here** | Sean French | contemporary fiction | English | [Start from Here](start-from-here.html) &bull; [Markdown](start-from-here.md) | `100 lines` |
-| **At Risk** | Stella Rimington | thriller | English | [At Risk](at-risk.html) &bull; [Markdown](at-risk.md) | `100 lines` |
-| **The No.1 Ladies' Detective Agency** | Alexander McCall Smith | crime | English | [The No.1 Ladies' Detective Agency](the-no-1-ladies-detective-agency.html) &bull; [Markdown](the-no-1-ladies-detective-agency.md) | `100 lines` |
-| **The Da Vinci Code** | Dan Brown | mystery | English | [The Da Vinci Code](the-da-vinci-code.html) &bull; [Markdown](the-da-vinci-code.md) | `100 lines` |
-| **Up and Down in the Dales** | Gervase Phinn | memoir | English | [Up and Down in the Dales](up-and-down-in-the-dales.html) &bull; [Markdown](up-and-down-in-the-dales.md) | `100 lines` |
-| **The Return of the Dancing Master** | Henning Mankell | crime | English | [The Return of the Dancing Master](the-return-of-the-dancing-master.html) &bull; [Markdown](the-return-of-the-dancing-master.md) | `100 lines` |
-| **A Gathering Light** | Jennifer Donnelly | historical fiction | English | [A Gathering Light](a-gathering-light.html) &bull; [Markdown](a-gathering-light.md) | `100 lines` |
-| **Harry Potter and the Chamber of Secrets** | J.K. Rowling | fantasy | English | [Harry Potter and the Chamber of Secrets](harry-potter-and-the-chamber-of-secrets.html) &bull; [Markdown](harry-potter-and-the-chamber-of-secrets.md) | `100 lines` |
-| **Harry Potter and the Prisoner of Azkaban** | J.K. Rowling | fantasy | English | [Harry Potter and the Prisoner of Azkaban](harry-potter-and-the-prisoner-of-azkaban.html) &bull; [Markdown](harry-potter-and-the-prisoner-of-azkaban.md) | `100 lines` |
+<div class="table-responsive" markdown="1">
+
+| Novel Name | Author | Genre | Language | Reading Links | Verification |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **The Murder Artist** | John Case | <span class="badge badge-primary">Crime</span> | English | [Read HTML](the-murder-artist.html) &bull; [Markdown](the-murder-artist.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The Adventures of Tom Sawyer** | Mark Twain | <span class="badge badge-primary">Bildungsroman</span> | English | [Read HTML](the-adventures-of-tom-sawyer.html) &bull; [Markdown](the-adventures-of-tom-sawyer.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **Adventures of Huckleberry Finn** | Mark Twain | <span class="badge badge-primary">Bildungsroman</span> | English | [Read HTML](adventures-of-huckleberry-finn.html) &bull; [Markdown](adventures-of-huckleberry-finn.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The King of Torts** | John Grisham | <span class="badge badge-primary">Legal Thriller</span> | English | [Read HTML](the-king-of-torts.html) &bull; [Markdown](the-king-of-torts.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **A Week in Winter** | Marcia Willett | <span class="badge badge-primary">Fiction</span> | English | [Read HTML](a-week-in-winter.html) &bull; [Markdown](a-week-in-winter.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The Last Detective** | Robert Crais | <span class="badge badge-primary">Crime</span> | English | [Read HTML](the-last-detective.html) &bull; [Markdown](the-last-detective.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **Eat Cake** | Jeanne Ray | <span class="badge badge-primary">Contemporary Fiction</span> | English | [Read HTML](eat-cake.html) &bull; [Markdown](eat-cake.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The Last Juror** | John Grisham | <span class="badge badge-primary">Legal Thriller</span> | English | [Read HTML](the-last-juror.html) &bull; [Markdown](the-last-juror.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The Various Haunts of Men** | Susan Hill | <span class="badge badge-primary">Crime</span> | English | [Read HTML](the-various-haunts-of-men.html) &bull; [Markdown](the-various-haunts-of-men.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The Codex** | Douglas Preston | <span class="badge badge-primary">Thriller</span> | English | [Read HTML](the-codex.html) &bull; [Markdown](the-codex.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The Curious Incident of the Dog in the Night-Time** | Mark Haddon | <span class="badge badge-primary">Mystery</span> | English | [Read HTML](the-curious-incident-of-the-dog-in-the-night-time.html) &bull; [Markdown](the-curious-incident-of-the-dog-in-the-night-time.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **Start from Here** | Sean French | <span class="badge badge-primary">Contemporary Fiction</span> | English | [Read HTML](start-from-here.html) &bull; [Markdown](start-from-here.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **At Risk** | Stella Rimington | <span class="badge badge-primary">Thriller</span> | English | [Read HTML](at-risk.html) &bull; [Markdown](at-risk.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The No.1 Ladies' Detective Agency** | Alexander McCall Smith | <span class="badge badge-primary">Crime</span> | English | [Read HTML](the-no-1-ladies-detective-agency.html) &bull; [Markdown](the-no-1-ladies-detective-agency.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The Da Vinci Code** | Dan Brown | <span class="badge badge-primary">Mystery</span> | English | [Read HTML](the-da-vinci-code.html) &bull; [Markdown](the-da-vinci-code.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **Up and Down in the Dales** | Gervase Phinn | <span class="badge badge-primary">Memoir</span> | English | [Read HTML](up-and-down-in-the-dales.html) &bull; [Markdown](up-and-down-in-the-dales.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **The Return of the Dancing Master** | Henning Mankell | <span class="badge badge-primary">Crime</span> | English | [Read HTML](the-return-of-the-dancing-master.html) &bull; [Markdown](the-return-of-the-dancing-master.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **A Gathering Light** | Jennifer Donnelly | <span class="badge badge-primary">Historical Fiction</span> | English | [Read HTML](a-gathering-light.html) &bull; [Markdown](a-gathering-light.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **Harry Potter and the Chamber of Secrets** | J.K. Rowling | <span class="badge badge-primary">Fantasy</span> | English | [Read HTML](harry-potter-and-the-chamber-of-secrets.html) &bull; [Markdown](harry-potter-and-the-chamber-of-secrets.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+| **Harry Potter and the Prisoner of Azkaban** | J.K. Rowling | <span class="badge badge-primary">Fantasy</span> | English | [Read HTML](harry-potter-and-the-prisoner-of-azkaban.html) &bull; [Markdown](harry-potter-and-the-prisoner-of-azkaban.md) | <span class="badge badge-success">✓ 100 Lines</span> |
+
+</div>
 
 ---
 

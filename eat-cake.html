@@ -286,6 +286,10 @@
       background: var(--surface-hover);
       color: var(--text-muted);
       border: 1px solid var(--border);
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
     }
 
     .badge-primary {
@@ -298,6 +302,7 @@
       background: var(--success-glow);
       color: var(--success);
       border-color: var(--success);
+      white-space: nowrap;
     }
 
     .novel-card-title {
@@ -542,21 +547,28 @@
       border: 1px solid var(--border);
     }
 
-    /* Table */
+    /* Table & Repository Index */
     .table-responsive {
       overflow-x: auto;
-      margin: 1.5rem 0;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.75rem 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface-card);
+      box-shadow: var(--card-shadow);
     }
 
     table {
       width: 100%;
+      min-width: 760px;
       border-collapse: collapse;
       font-size: 0.92rem;
     }
 
     th, td {
       border: 1px solid var(--border);
-      padding: 0.8rem 1rem;
+      padding: 0.85rem 1.1rem;
+      vertical-align: middle;
       text-align: left;
     }
 
@@ -564,10 +576,58 @@
       background: var(--surface);
       color: var(--primary);
       font-weight: 700;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     tr:nth-child(even) {
       background: var(--surface);
+    }
+
+    tbody tr {
+      transition: background-color 0.15s ease;
+    }
+
+    tbody tr:hover {
+      background: var(--surface-hover);
+    }
+
+    /* Column-specific alignment and sizing */
+    .col-novel, th.col-novel, td.col-novel {
+      text-align: left;
+      min-width: 190px;
+    }
+
+    .col-author, th.col-author, td.col-author {
+      text-align: left;
+      min-width: 140px;
+      color: var(--text-muted);
+    }
+
+    .col-genre, th.col-genre, td.col-genre {
+      text-align: center;
+      white-space: nowrap;
+      width: 125px;
+    }
+
+    .col-lang, th.col-lang, td.col-lang {
+      text-align: center;
+      white-space: nowrap;
+      width: 100px;
+      color: var(--text-muted);
+    }
+
+    .col-links, th.col-links, td.col-links {
+      text-align: center;
+      white-space: nowrap;
+      min-width: 170px;
+    }
+
+    .col-verification, th.col-verification, td.col-verification {
+      text-align: center;
+      white-space: nowrap;
+      width: 135px;
     }
 
     /* Standalone Novel Page Bar */
@@ -668,7 +728,7 @@
         <span>Novels Summary Archive</span>
       </a>
       <div class="nav-links">
-        <span class="version-pill">v1.3.0</span>
+        <span class="version-pill">v1.3.1</span>
         <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle theme">☀️ Light</button>
         <a href="https://github.com/govindarajanv/novels" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub</a>
       </div>
@@ -803,7 +863,7 @@
   <footer>
     <div class="footer-inner">
       <div>
-        <strong>Novels Summary Archive</strong> &bull; Version <span class="version-pill" style="font-size: 0.7rem; padding: 0.1rem 0.45rem;">v1.3.0</span>
+        <strong>Novels Summary Archive</strong> &bull; Version <span class="version-pill" style="font-size: 0.7rem; padding: 0.1rem 0.45rem;">v1.3.1</span>
       </div>
       <div class="footer-links">
         <a href="index.html">Index</a> &bull;
